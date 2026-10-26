@@ -1,0 +1,116 @@
+URL: https://api-bird.prod.birdapp.com/bird/chirp
+Method: PUT
+Protocol: h2
+Status: Complete
+Response: 200 
+SSL: Yes
+
+Request time: Mon Oct 26 19:10:40 EDT 2026
+Response time: Mon Oct 26 19:10:40 EDT 2026
+Duration: 193 ms
+
+Request size: 64 B
+Response size: 1.3 kB
+Total size: 1.4 kB
+
+---------- Request ----------
+
+App-Version: 4.417.1.3
+Accept-Language: en-US,en
+Bird-Device-Id: 038abc5740cbcf96
+Battery-Level: 58
+Bluetooth-State: disabled
+Carrier-Name: Google Fi
+Client-Time: 2026-10-26T19:10:40.636-04:00
+Connection-Type: unknown
+Device-Model: Pixel 10a
+Device-Name: stallion
+Device-Region: US
+Device-Language: en-US
+Device-Id: 038abc5740cbcf96
+Location: {"latitude":38.8845834,"longitude":-77.1221056,"heading":null,"speed":null,"altitude":57.70000076293945,"accuracy":17.784000396728516,"mocked":false,"timestamp":"2026-10-26T19:10:34.722-04:00","source":"gps"}
+Mobile-Network-Generation: unknown
+OS-Version: 16
+Platform: android
+User-Agent: Bird/4.417.1.3 (co.bird.android; release; Android - 16)
+App-Name: bird
+App-Type: operator
+Role: operator
+Authorization: Bearer eyJhbGciOiJSUzUxMiJ9.eyJqdGkiOiI0YTc1ODcyMi0wYTJiLTQyNjMtOTM5Ni02ZmFiMjIzMTIxMjIiLCJzdWIiOiI1ZjM4OWI4Mi0yOTE0LTQ4MmItOTdhOC03MzI4NGM1ODczOGUiLCJuYmYiOjE3OTMwNDMxNzcsImV4cCI6MTc5MzEyOTU3NywiYXVkIjoiYmlyZC5zZXJ2aWNlcyIsImlzcyI6ImJpcmQuYXV0aCIsImlhdCI6MTc5MzA0MzE3Nywicm9sZXMiOlsiVVNFUiJdLCJhcHAiOiI3YjhlZDk1NS02ZTNhLTRlZWMtYmEyMC04OGFmOWQ3YWVhNzYiLCJ2ZXIiOiIwLjAuMiJ9.CjOXvHwXO6koBAt2dBvV_ckWccCrlg7kjXLjFHxh23Xf1wBTo9EUsnPZINk-pKNj04r_86RyQLtoYNJdwtrvOl75hitEd03hyGgC8zZjMK2kpJWeSEbQhT_W7SRuxlLHlEroCmXQjH6MWTa5mEHd6Eo3xseXCBjF3HFhr_RpE5JwJ5jp0YNsCSDhOJ6izt07qjzbdEgnXvOaKY7wFIhHSYvIROJ6Mr3z51wQOQr05JB440pNqdThtTXy8LdxDB5ABcV42PYXtgnE0-hEtzN4Hsp1vQplJhBskkD4mORXTrVjqBVL433t1lFOruq5JQEErZ3QIfRumUhOjm82nlEuqACBnwsQtMPe1oY8BqUVD8y-uiFzsQ7PBW-dcPJysT471bz1USkt3IWiveqaEjESn9TyU8nuPo1ecqALB9z4iukE8rjO4avsKFk2wcHpBnuev0Y3rAZt-wikK6KxLG_MUEsAdQC5J84ABdU7NJR0s1jNzeljThVzvF_1Td8XAKxZQjJyhKJXVYchzaNAwGK_9EbjY6bz17IcTJZAtiLWAv2o2dtYVlCtbvOZSVC8HL7gCUxvxOw5Z1Ov9lAdmgg6K7yFgEC0_8BPx8Ujvy5quwZGe-fyFfGjf2Ap7l_CXHwoDFxilpRWhPy-ZdidinGH9FrzW1EH0PhesqvGQZoseFg
+
+{
+  "bird_id": "e56640f7-ac28-421c-b541-d0e3944d3126",
+  "alarm": false
+}
+
+---------- Response ----------
+
+content-type: application/json
+date: Mon, 26 Oct 2026 23:10:39 GMT
+vary: Accept-Encoding
+strict-transport-security: max-age=15724800; includeSubDomains
+x-cache: Miss from cloudfront
+via: 1.1 8c35d9f8e012281d9fc1c918b8394b84.cloudfront.net (CloudFront)
+x-amz-cf-pop: IAD61-P9
+x-amz-cf-id: PnLs8YWn3PCdOaHOBKB8x2acYGzzOw_rsLhYubbXElR843kowof5Yg==
+
+{
+  "id": "ff57c7d4-c526-4f70-ae66-d7a89d743abc",
+  "code": "",
+  "down": false,
+  "captive": true,
+  "needs_inspection": false,
+  "partner_id": "11111111-1111-1111-1111-111111111111",
+  "fleet_id": "5ada71d9-bf59-4561-8198-c26438c4fe79",
+  "brand_id": "df76d602-dd1a-4ce4-a64f-2e5dd8c6f845",
+  "bluetooth": true,
+  "cellular": true,
+  "speed": 0.0,
+  "heading": 0.0,
+  "altitude": 0.0,
+  "gps_fix": false,
+  "distance": 0,
+  "ulm": false,
+  "bounty_id": "7b8b66a2-586b-47b1-acef-847c57ecad73",
+  "actual_battery_level": 0,
+  "tracker_battery_level": 0,
+  "locked": true,
+  "ack_locked": true,
+  "damaged": false,
+  "disconnected": false,
+  "service": false,
+  "transit": false,
+  "broken": false,
+  "debug": false,
+  "ack_captive": true,
+  "asleep": false,
+  "ack_asleep": false,
+  "hibernation": false,
+  "ack_hibernation": false,
+  "lost": false,
+  "relocate": false,
+  "impounded": false,
+  "submerged": false,
+  "accident": false,
+  "storage": false,
+  "charging": false,
+  "missing_count": 0,
+  "permitted": false,
+  "hidden": false,
+  "created_at": "2026-10-26T23:10:39.736616Z",
+  "updated_at": "2026-10-26T23:10:39.736617Z",
+  "power_fault_count": 0,
+  "model": "m365",
+  "lifecycle": {
+    "id": "79f57560-9e45-4dc9-8b74-632998cabff6",
+    "bird_id": "ff57c7d4-c526-4f70-ae66-d7a89d743abc",
+    "condition": "error_unknown",
+    "special_condition": "error_unknown",
+    "brain_state": "error_unknown",
+    "placement": "error_unknown",
+    "created_at": "2026-10-26T23:10:39.736622Z"
+  },
+  "actions": [],
+  "battery_level": 0,
+  "area_key": "F461754DC547D80D5B8E77A5018FC6E8"
+}
