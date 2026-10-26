@@ -1,0 +1,1469 @@
+URL: https://api-bird.prod.birdapp.com/config
+Method: GET
+Protocol: h2
+Status: Complete
+Response: 200 
+SSL: Yes
+
+Request time: Mon Oct 26 17:57:31 EDT 2026
+Response time: Mon Oct 26 17:57:31 EDT 2026
+Duration: 204 ms
+
+Request size: 0 B
+Response size: 43.4 kB
+Total size: 43.4 kB
+
+---------- Request ----------
+
+App-Version: 4.417.1.3
+Accept-Language: en-US,en
+Bird-Device-Id: 038abc5740cbcf96
+Battery-Level: 64
+Bluetooth-State: disabled
+Carrier-Name: Google Fi
+Client-Time: 2026-10-26T17:57:31.747-04:00
+Connection-Type: unknown
+Device-Model: Pixel 10a
+Device-Name: stallion
+Device-Region: US
+Device-Language: en-US
+Device-Id: 038abc5740cbcf96
+Location: {"latitude":38.8844987,"longitude":-77.1222017,"heading":null,"speed":null,"altitude":57.79999923706055,"accuracy":100.0,"mocked":false,"timestamp":"2026-10-26T17:54:22.374-04:00","source":"gps"}
+Mobile-Network-Generation: unknown
+OS-Version: 16
+Platform: android
+User-Agent: Bird/4.417.1.3 (co.bird.android; release; Android - 16)
+App-Name: bird
+App-Type: operator
+Role: operator
+Authorization: Bearer eyJhbGciOiJSUzUxMiJ9.eyJqdGkiOiI0YTc1ODcyMi0wYTJiLTQyNjMtOTM5Ni02ZmFiMjIzMTIxMjIiLCJzdWIiOiI1ZjM4OWI4Mi0yOTE0LTQ4MmItOTdhOC03MzI4NGM1ODczOGUiLCJuYmYiOjE3OTMwNDMxNzcsImV4cCI6MTc5MzEyOTU3NywiYXVkIjoiYmlyZC5zZXJ2aWNlcyIsImlzcyI6ImJpcmQuYXV0aCIsImlhdCI6MTc5MzA0MzE3Nywicm9sZXMiOlsiVVNFUiJdLCJhcHAiOiI3YjhlZDk1NS02ZTNhLTRlZWMtYmEyMC04OGFmOWQ3YWVhNzYiLCJ2ZXIiOiIwLjAuMiJ9.CjOXvHwXO6koBAt2dBvV_ckWccCrlg7kjXLjFHxh23Xf1wBTo9EUsnPZINk-pKNj04r_86RyQLtoYNJdwtrvOl75hitEd03hyGgC8zZjMK2kpJWeSEbQhT_W7SRuxlLHlEroCmXQjH6MWTa5mEHd6Eo3xseXCBjF3HFhr_RpE5JwJ5jp0YNsCSDhOJ6izt07qjzbdEgnXvOaKY7wFIhHSYvIROJ6Mr3z51wQOQr05JB440pNqdThtTXy8LdxDB5ABcV42PYXtgnE0-hEtzN4Hsp1vQplJhBskkD4mORXTrVjqBVL433t1lFOruq5JQEErZ3QIfRumUhOjm82nlEuqACBnwsQtMPe1oY8BqUVD8y-uiFzsQ7PBW-dcPJysT471bz1USkt3IWiveqaEjESn9TyU8nuPo1ecqALB9z4iukE8rjO4avsKFk2wcHpBnuev0Y3rAZt-wikK6KxLG_MUEsAdQC5J84ABdU7NJR0s1jNzeljThVzvF_1Td8XAKxZQjJyhKJXVYchzaNAwGK_9EbjY6bz17IcTJZAtiLWAv2o2dtYVlCtbvOZSVC8HL7gCUxvxOw5Z1Ov9lAdmgg6K7yFgEC0_8BPx8Ujvy5quwZGe-fyFfGjf2Ap7l_CXHwoDFxilpRWhPy-ZdidinGH9FrzW1EH0PhesqvGQZoseFg
+
+(body is empty)
+
+---------- Response ----------
+
+content-type: application/json
+date: Mon, 26 Oct 2026 21:57:30 GMT
+strict-transport-security: max-age=15724800; includeSubDomains
+vary: Accept-Encoding
+x-cache: Miss from cloudfront
+via: 1.1 5cac25c3f8a8e7707f05f3c2c47aa970.cloudfront.net (CloudFront)
+x-amz-cf-pop: IAD61-P9
+x-amz-cf-id: 0jaiHJDPnRSEa-gbDDc9VRBvyf7TieQoDlVmN4ITX57TLMjKvJG5fQ==
+
+{
+  "allow_cdn_location": true,
+  "android": {
+    "debug_deserializer": false,
+    "deserializer": "MOSHI"
+  },
+  "android_block_mock_location_providers": true,
+  "android_location_update_interval_seconds": 3,
+  "android_min_version": "1.2.8",
+  "android_parking": {
+    "close_to_nest_parking_limit": 2,
+    "close_to_nest_parking_rate_minutes": 120,
+    "enable_android_background_ride_photo_upload": true,
+    "enable_close_to_nest_parking": false,
+    "enable_horizontal_accuracy_location": false,
+    "enable_nest_details_screen": false,
+    "enable_no_park_zone_no_end_ride_button": false,
+    "enable_outside_service_area_rider_bar_parking_fine_message": false,
+    "enable_rider_parking_nest_annotation": true,
+    "enable_rider_parking_nest_radius": true,
+    "enable_rider_parking_review": false,
+    "give_incentive_amount": false,
+    "max_meters_from_parking_nest_to_be_close": 100,
+    "message_amount_of_incentive": true,
+    "parking_incentive_value": 50,
+    "parking_location_verification": {
+      "enabled": true,
+      "method_blocked_ride_dialog": "google_vps_v2",
+      "required_horizontal_accuracy_meters": 3.0,
+      "show_ar_marker": true,
+      "skip_bird_scan": true
+    },
+    "parking_minimum_zoom_level": 16.5,
+    "rider_nest_additional_buffer_meters": 0.0,
+    "show_parking_announcement": false,
+    "thanking_preferred_parking": false,
+    "use_area_keys": true,
+    "use_ultra_wide_camera_if_available": false,
+    "enable_parking_pin_offers": false,
+    "parking_ai_photo_review": {
+      "enabled": false,
+      "max_width": 768,
+      "max_height": 768
+    },
+    "parking_restrictions_override_photo_review": {
+      "enabled": true,
+      "max_width": 768,
+      "max_height": 768
+    }
+  },
+  "asset": {
+    "enable_signed_url_upload": true
+  },
+  "auth_config": {
+    "enable_sign_in_with_apple": true,
+    "enable_sign_in_with_google": true
+  },
+  "banner_config": {
+    "banner_ids": [
+      "7bcdcbcd-3b04-49f6-8235-5278bb548fd2"
+    ]
+  },
+  "banner_steps": [
+    {
+      "rides": 1000000,
+      "banner": "how_to_ride"
+    },
+    {
+      "rides": 1000000,
+      "banner": "charger_start"
+    }
+  ],
+  "bird_finder": {
+    "active_scan_repeat_duration": 5,
+    "passive_scan_repeat_duration": 60
+  },
+  "bird_pay": {
+    "bird_pay_max_amount": 10000,
+    "bird_pay_min_amount": 100,
+    "enable_bird_pay": false,
+    "enable_merchant_site_tips": false,
+    "enable_payment_passthrough": false,
+    "enable_quick_apple_pay": false,
+    "enable_tap_to_pay": false,
+    "onboarding_config": {
+      "enabled": false,
+      "navigation_title": "BIRD PAY",
+      "steps": [
+        {
+          "kind": "introducing_bird_pay",
+          "step": 1,
+          "title": "Introducing Bird Pay",
+          "asset": {
+            "media": {
+              "media_id": "00000000-0000-0000-0000-000000019a96",
+              "media_url": "https://bird-static-assets.s3-us-west-2.amazonaws.com/bird_pay/bird_logo_background.png"
+            }
+          },
+          "body_text": "Use your Bird credits to make purchases at local businesses",
+          "action_button_text": "NEXT"
+        }
+      ]
+    },
+    "onboardingconfig": {
+      "enabled": false,
+      "navigation_title": "BIRD PAY",
+      "steps": [
+        {
+          "kind": "introducing_bird_pay",
+          "step": 1,
+          "title": "Introducing Bird Pay",
+          "asset": {
+            "media": {
+              "media_id": "00000000-0000-0000-0000-000000019a96",
+              "media_url": "https://bird-static-assets.s3-us-west-2.amazonaws.com/bird_pay/bird_logo_background.png"
+            }
+          },
+          "body_text": "Use your Bird credits to make purchases at local businesses",
+          "action_button_text": "NEXT"
+        }
+      ]
+    },
+    "pay_support_email": "help@bird.co",
+    "pay_support_phone": "",
+    "show_bird_pay_on_map": false
+  },
+  "bird_plus": {
+    "enabled": false
+  },
+  "bird_watcher_distance_check": true,
+  "bird_watcher_distance_check_max_radius": 50,
+  "bluetooth_firmware": {
+    "force": true,
+    "model": "es",
+    "version": 38
+  },
+  "blur_physical_lock_combination": false,
+  "braze": {
+    "proximity_incentive": {
+      "rate_limit_seconds": 86400
+    }
+  },
+  "can_fix_qr": true,
+  "cloudflare_sdk_enabled": true,
+  "collection_nest": {
+    "enable_charger_reserve_collection_drops": false,
+    "hide_capacity": false,
+    "show_charger_collection_drops": false
+  },
+  "communication_opt_in": {
+    "communication_opt_in": true,
+    "default_opt_in_checked": true,
+    "localized_communication_opt_in_string": "Send me promos and news from Bird and its partners via e-mail and other electronic messages."
+  },
+  "compliance": {
+    "enable_no_parking_area_warnings": true,
+    "user_can_delete_account": true,
+    "warn_fine_leave_outside_service_area": 0,
+    "warn_fine_lock_compliance": 500
+  },
+  "damaged_transport_show_announcement": false,
+  "deeplink_config": {
+    "enable_dynalinks": true
+  },
+  "disable_power_supplies": true,
+  "drop_proximity_using_location_accuracy": true,
+  "dynamic_agreements_allow_batching": true,
+  "enable_admin_needs_parts_button": true,
+  "enable_after_hours_alert": true,
+  "enable_apple_pay": true,
+  "enable_area_specific_rider_bar_messages": false,
+  "enable_areas_as_bitmap": true,
+  "enable_auth_v2_flow": true,
+  "enable_bd_bluetooth_override": false,
+  "enable_bonus_deals": false,
+  "enable_community_mode": true,
+  "enable_configurable_contractor_onboarding": false,
+  "enable_contact_invite": false,
+  "enable_coupon_v2": true,
+  "enable_database_driven_analytics": true,
+  "enable_due_time": true,
+  "enable_dynamic_alerts": true,
+  "enable_dynalinks": true,
+  "enable_feature_announcements": true,
+  "enable_give_free_rides": true,
+  "enable_helmet_selfie": false,
+  "enable_id_card_string_swap": false,
+  "enable_improved_task_list": false,
+  "enable_in_ride_bd_tracks": true,
+  "enable_ml_kit_barcode_scanner": true,
+  "enable_multiple_smartlock_keys": true,
+  "enable_offline_analytics": true,
+  "enable_onboarding_banner_entry": true,
+  "enable_onboarding_ride_entry": false,
+  "enable_operator_mode": true,
+  "enable_outside_service_area_warnings": true,
+  "enable_physical_lock_lock": true,
+  "enable_physical_lock_photo_confirmation": false,
+  "enable_physical_lock_replacement": false,
+  "enable_physical_lock_unlock": true,
+  "enable_preferred_parking_v0": false,
+  "enable_preload_skip_coupons": true,
+  "enable_price_per_mile_feature_announcement": false,
+  "enable_report_bad_riding": false,
+  "enable_roles_drop_down": true,
+  "enable_sign_in_with_apple": true,
+  "enable_sign_in_with_google": true,
+  "enable_task_list_actions_v2_indirect_cancel": true,
+  "enable_task_list_v2": true,
+  "enable_tooltip_preferred_placement": false,
+  "enable_updated_g1g1": true,
+  "end_ride_rating_config": {
+    "enable_end_ride_rating_issues_v2": true,
+    "enable_end_ride_rating_issues_v2_grouped": true,
+    "enable_end_ride_rating_issues_v2_tabbed": false
+  },
+  "enforce_no_parking_v0": true,
+  "enforce_parking_areas": true,
+  "external_feed": {},
+  "force_bt_connection_by_model": [],
+  "force_bt_permission_by_model": [],
+  "fraud": {
+    "auth_charge_amount": 500,
+    "collect_card_billing_address": false,
+    "collect_card_name": false,
+    "collect_card_zip": false
+  },
+  "good_parking_coupons": {
+    "enabled": false,
+    "minutes_between_rides": 120
+  },
+  "google_pay_available": true,
+  "hide_time_in_ride_history": false,
+  "horizontal_accuracy_radius_multiplier": 2.0,
+  "identification": {
+    "enable_identification_service": true,
+    "onboarding_before_payment": true,
+    "identification_help_article": "https://help.bird.co/",
+    "min_rectangle_confidence": 0.9,
+    "min_landmark_width_ratio": 0.25,
+    "enable_manual_image_heuristics": true,
+    "blur_variance_threshold": 200.0,
+    "enable_low_light_compensation": true
+  },
+  "in_ride_tracks_interval_ms": 5000,
+  "inaccessible_bird": {
+    "charger_role_config": {
+      "cannot_access_threshold_radius_meters": 5.0E7,
+      "mark_missing_bird_finder_required_interval_seconds": 10
+    },
+    "enable_charger_cannot_access": false,
+    "enable_operator_cannot_access": true,
+    "enable_rider_cannot_access": false,
+    "enable_supercharger_cannot_access": true,
+    "operator_role_config": {
+      "cannot_access_threshold_radius_meters": 50.0,
+      "mark_missing_bird_finder_required_interval_seconds": 10
+    },
+    "report_max_photos_input": 5,
+    "rider_role_config": {
+      "cannot_access_threshold_radius_meters": 5.0E7,
+      "mark_missing_bird_finder_required_interval_seconds": 10
+    },
+    "supercharger_role_config": {
+      "cannot_access_threshold_radius_meters": 5.0E7,
+      "mark_missing_bird_finder_required_interval_seconds": 10
+    }
+  },
+  "ios_min_version": "1.0.0",
+  "ios_parking": {
+    "close_to_nest_parking_limit": 2,
+    "close_to_nest_parking_rate_minutes": 120,
+    "disable_parking_bottom_shelf_display": true,
+    "enable_android_background_ride_photo_upload": false,
+    "enable_close_to_nest_parking": false,
+    "enable_horizontal_accuracy_location": false,
+    "enable_nest_details_screen": false,
+    "enable_no_park_zone_no_end_ride_button": false,
+    "enable_outside_service_area_rider_bar_parking_fine_message": false,
+    "enable_rider_parking_nest_annotation": true,
+    "enable_rider_parking_nest_radius": true,
+    "enable_rider_parking_review": false,
+    "give_incentive_amount": false,
+    "max_meters_from_parking_nest_to_be_close": 100,
+    "message_amount_of_incentive": true,
+    "parking_incentive_value": 50,
+    "parking_location_verification": {
+      "enabled": true,
+      "method_blocked_ride_dialog": "google_vps_v2",
+      "required_horizontal_accuracy_meters": 3.0,
+      "skip_bird_scan": true
+    },
+    "parking_minimum_zoom_level": 0.075,
+    "rider_nest_additional_buffer_meters": 0.0,
+    "show_parking_announcement": false,
+    "thanking_preferred_parking": false,
+    "use_area_keys": true,
+    "use_ultra_wide_camera_if_available": true,
+    "enable_parking_pin_offers": false,
+    "parking_ai_photo_review": {
+      "enabled": false,
+      "max_width": 768,
+      "max_height": 768
+    },
+    "parking_restrictions_override_photo_review": {
+      "enabled": true,
+      "max_width": 768,
+      "max_height": 768
+    }
+  },
+  "lease": {
+    "lease_types": {
+      "helmet": {
+        "enabled": false,
+        "lease_duration_seconds": 86400
+      }
+    }
+  },
+  "limited_data_on_validate": false,
+  "local": {
+    "contractor_zone_radius": 1000.0,
+    "helmet_min_rides": 1,
+    "weather_alert": false,
+    "enable_marketing": true,
+    "is_in_service": true,
+    "current_service_status": "IN_SERVICE",
+    "no_service_period": "5am - 8pm",
+    "formatted_service_hours": "5am - 8pm"
+  },
+  "local_config": {
+    "contractor_zone_radius": 1000.0,
+    "helmet_min_rides": 1,
+    "weather_alert": false,
+    "enable_marketing": true,
+    "is_in_service": true,
+    "current_service_status": "IN_SERVICE",
+    "no_service_period": "5am - 8pm",
+    "formatted_service_hours": "5am - 8pm"
+  },
+  "localization": {
+    "ota": {
+      "enabled": true,
+      "bird_project_id": "ced9dc76-aaf1-416c-9da9-7ac3f28e78ce"
+    }
+  },
+  "long_term_rental": {
+    "drop_off": {
+      "enabled": false,
+      "mobile_content": {
+        "cta_banner_label": "INTRODUCING PERSONAL RENTALS",
+        "intro_header": "Rent a Bird of your own.",
+        "intro_item_list": [
+          "Unlimited rides starting from $29.99/month",
+          "Central pickup location",
+          "Bluetooth lock included"
+        ],
+        "menu_item_label": "Personal Rental",
+        "payment_fine_print": "Your rental auto-renews on date listed above. You can cancel in app up to 24 hours before then to avoid next month's charge."
+      },
+      "required_fields": [],
+      "show_intro_once": false,
+      "support": {
+        "support_article_id": "360019188812"
+      }
+    },
+    "enabled": false,
+    "mobile_content": {
+      "cta_banner_label": "INTRODUCING PERSONAL RENTALS",
+      "intro_header": "Rent a Bird of your own.",
+      "intro_item_list": [
+        "Unlimited rides starting from $29.99/month",
+        "Central pickup location",
+        "Bluetooth lock included"
+      ],
+      "menu_item_label": "Personal Rental",
+      "payment_fine_print": "Your rental auto-renews on date listed above. You can cancel in app up to 24 hours before then to avoid next month's charge."
+    },
+    "on_demand": {
+      "enabled": false,
+      "mobile_content": {
+        "cta_banner_label": "INTRODUCING PERSONAL RENTALS",
+        "intro_header": "Rent a Bird of your own.",
+        "intro_item_list": [
+          "Unlimited rides starting from $29.99/month",
+          "Central pickup location",
+          "Bluetooth lock included"
+        ],
+        "menu_item_label": "Personal Rental",
+        "payment_fine_print": "Your rental auto-renews on date listed above. You can cancel in app up to 24 hours before then to avoid next month's charge."
+      },
+      "pill_config": {},
+      "required_fields": [],
+      "show_intro_once": false,
+      "support": {
+        "support_article_id": "360019188812"
+      }
+    },
+    "pick_up": {
+      "enabled": false,
+      "mobile_content": {
+        "cta_banner_label": "INTRODUCING PERSONAL RENTALS",
+        "intro_header": "Rent a Bird of your own.",
+        "intro_item_list": [
+          "Unlimited rides starting from $29.99/month",
+          "Central pickup location",
+          "Bluetooth lock included"
+        ],
+        "menu_item_label": "Personal Rental",
+        "payment_fine_print": "Your rental auto-renews on date listed above. You can cancel in app up to 24 hours before then to avoid next month's charge."
+      },
+      "required_fields": [],
+      "show_intro_once": false,
+      "support": {
+        "support_article_id": "360019188812"
+      }
+    },
+    "show_intro_once": false,
+    "support": {
+      "support_article_id": "360019188812"
+    }
+  },
+  "max_location_accuracy_radius": 150.0,
+  "merchant": {
+    "enable_manual_location_on_input": false,
+    "enable_merchant_agreements": false,
+    "enable_merchant_mode": false,
+    "merchant_banner_agreement_config": {}
+  },
+  "multi_ride": {
+    "enabled": true,
+    "max_ride_count": 5,
+    "additional_rides_allow_bluetooth": false,
+    "additional_rides_allow_physical_locks": false,
+    "show_map_pins_in_ride": false,
+    "use_merged_host_agreement": true
+  },
+  "native_update_identifier": "1260842311",
+  "nest_radius_multiplier": 1.0,
+  "nest_search_accuracy_radius_limit": 0.0,
+  "offer": {
+    "enabled": false
+  },
+  "onboarding": {
+    "enable_rider_banner_entry": false,
+    "enable_rider_one_flow": true
+  },
+  "operator": {
+    "bluetooth_locks": {},
+    "enable_complete_other_users_task": false,
+    "enable_operator": false,
+    "enable_partner_operator": false,
+    "enable_peripheral_keyboard_support": false,
+    "enable_release_all_tasks_distance_check": true,
+    "enable_unlock_physical_locks": false,
+    "features": {
+      "ar_parking": {
+        "debug": false,
+        "raw_data": false,
+        "scan": {
+          "enabled": false
+        }
+      },
+      "battery_swap": {
+        "enabled_battery_swap_map_button": true
+      },
+      "bulk_scanner": {
+        "enable_alarm_action": false,
+        "enable_capture_action": false,
+        "enable_capture_and_load_action": false,
+        "enable_capture_and_mark_damaged_action": false,
+        "enable_capture_and_start_task_action": false,
+        "enable_chirp_action": false,
+        "enable_from_map_scan_button": false,
+        "enable_in_side_menu": false,
+        "enable_mark_damaged_action": false,
+        "enable_mark_fixed_action": false,
+        "enable_new_capture_flow": true,
+        "enable_release_action": false,
+        "enable_release_anywhere_and_end_task_action": false,
+        "enable_wake_bluetooth_action": false,
+        "new_capture_flow_requires_capture_confirmation": false
+      },
+      "cell_tool": {
+        "enabled": false
+      },
+      "command_center": {
+        "enable_entry_routing": false,
+        "enable_past_repairs": false,
+        "enabled": false
+      },
+      "enable_lookup_bird": false,
+      "field_center": {
+        "enable_from_map_scan_button": false,
+        "enabled": false
+      },
+      "fleet_report": {
+        "enabled": false
+      },
+      "fleet_status": {
+        "enable_actions": false,
+        "enable_fleet_list": false,
+        "enable_fleet_marker_animation": true,
+        "enable_predictions": false,
+        "enabled": false
+      },
+      "health_check": {
+        "article_id": "",
+        "enabled": false
+      },
+      "id_tools": {
+        "battery_swap": {
+          "max_meters_from_vehicle": 100.0,
+          "validate_new_battery": false,
+          "validation_timeout_seconds": 30
+        },
+        "brain_swap_timeout_seconds": 600,
+        "enable_associate_any_brain": false,
+        "enable_associate_battery_serial": true,
+        "enable_associate_beacon": false,
+        "enable_associate_brain": false,
+        "enable_associate_german_license": false,
+        "enable_associate_handlebar": false,
+        "enable_associate_helmet": false,
+        "enable_associate_israel_license": false,
+        "enable_associate_spanish_license": false,
+        "enable_associate_license": false,
+        "enable_associate_lora_device": false,
+        "enable_associate_motor": false,
+        "enable_associate_one_code": false,
+        "enable_associate_pcm": false,
+        "enable_associate_physical_lock_sticker": false,
+        "enable_associate_qr": false,
+        "enable_associate_us_ca_plate": false,
+        "enable_dissociate_any_brain": false,
+        "enable_dissociate_battery_serial": true,
+        "enable_dissociate_beacon": false,
+        "enable_dissociate_brain": false,
+        "enable_dissociate_german_license": false,
+        "enable_dissociate_handlebar": false,
+        "enable_dissociate_helmet": false,
+        "enable_dissociate_israel_license": false,
+        "enable_dissociate_spanish_license": false,
+        "enable_dissociate_license": false,
+        "enable_dissociate_lora_device": false,
+        "enable_dissociate_motor": false,
+        "enable_dissociate_one_code": false,
+        "enable_dissociate_pcm": false,
+        "enable_dissociate_physical_lock_sticker": false,
+        "enable_dissociate_qr": false,
+        "enable_dissociate_us_ca_plate": false,
+        "enable_identify_with_bird_finder": false,
+        "enable_identify_with_manual_code_entry": false,
+        "enable_qc_sync": false,
+        "enabled": false
+      },
+      "inventory": {
+        "enable_check_in": false,
+        "enable_check_out": false,
+        "enable_drop_off": false,
+        "enable_pick_up": false,
+        "version": 2
+      },
+      "legacy_wake_birds": {
+        "enabled": false
+      },
+      "lifecycle_editor": {
+        "enabled": false
+      },
+      "maintenance": {
+        "enable_inventory": false
+      },
+      "map": {
+        "allow_area_tap_to_select_marker_areas": false,
+        "demand_cells_tappable": true,
+        "enable_areas": false,
+        "enable_cannot_access_badge": false,
+        "enable_downed_birds_pin": false,
+        "enable_failed_bounty_pin": false,
+        "enable_location_bounties": false,
+        "enable_nests": true,
+        "enable_offline_pin": false,
+        "enable_operator_birds_endpoint": false,
+        "enable_optimized_map_renderer": true,
+        "enable_parking_nests": false,
+        "enable_scan_button": true,
+        "enable_server_driven_areas": false,
+        "enable_server_driven_filters": true,
+        "enable_server_driven_map_pins": false,
+        "enable_warehouses": false,
+        "filters": {
+          "enable_battery_filter_logic_toggle": true,
+          "enable_quick_filters": false,
+          "enable_variable_fee_area_quick_filter": false
+        },
+        "flight_sheet": {
+          "restrict_info": false
+        },
+        "hours_on_bounty_to_be_overdue": 24,
+        "map_areas_last_update_refresh_threshold": 60,
+        "map_pins_stale_threshold": 30000,
+        "operator_area": {},
+        "show_recommended_birds_after_tap": true,
+        "zoom_include_user_location_threshold": 10000.0,
+        "enable_task_based_legend": false,
+        "hide_marker_battery": false,
+        "enable_lock_on_release_toggle": false
+      },
+      "nest_claims": {
+        "claim_cooldown_minutes": 30,
+        "enable": true
+      },
+      "nest_manager": {
+        "enabled": false,
+        "max_cells_per_query": 16,
+        "s2_zoom_level": 14
+      },
+      "nest_map": {
+        "enable_claim_nest_without_task": false,
+        "enable_expanded_nest_pin": true,
+        "enable_multi_nest_claim": false,
+        "enable_nest_multi_claim_manual_selection": false,
+        "enable_storage_nest_release_all_tasks": false,
+        "enabled": false,
+        "expanded_pin_zoom_threshold": 14
+      },
+      "nest_suggestion": {
+        "enabled": false,
+        "max_distance_from_original_location_meters": 100.0,
+        "max_nest_capacity": 10,
+        "max_nest_distance_from_user_meters": 100.0,
+        "photo_required": true
+      },
+      "notification_center": {
+        "category_filters_enabled": false,
+        "enabled": false
+      },
+      "release": {
+        "release_assignments": {
+          "enabled": false
+        },
+        "enable_release_scanner_bluetooth": true
+      },
+      "repair": {
+        "enable_ml_kit_scanner": false,
+        "enable_repair_v3": false,
+        "remove_manual_entry_from_inspection_scanner": true,
+        "require_vehicle_scan_confirmation_for_inspection": true,
+        "require_vehicle_scan_confirmation_for_repair": true
+      },
+      "replace_qr": {
+        "enabled": false
+      },
+      "reports": {
+        "enabled": false
+      },
+      "routing": {
+        "enable_editing": false,
+        "enabled": false
+      },
+      "settings": {
+        "enabled": true
+      },
+      "sweep_birds": {
+        "enable_service_center_details": false,
+        "enable_signal_buckets": false,
+        "enable_signal_filter": false,
+        "enable_variable_update_frequency": false,
+        "enabled": false
+      },
+      "task_list": {
+        "enable_alarm_action": false,
+        "enable_cancel_task_action": false,
+        "enable_direct_task_cancel": false,
+        "enable_lock_action": false,
+        "enabled": false,
+        "show_task_limit": false,
+        "v2": false,
+        "enable_task_based_task_list": false
+      },
+      "transfer_order": {
+        "allow_sku_scan_override": false,
+        "enable_container_order_lookup": false,
+        "enable_operator_transfer_order": false,
+        "enable_pickup_test_ride": true,
+        "enable_scrap_order": false,
+        "enable_transfer_order": false,
+        "min_sku_inbound_scan_before_process_allowed": 2147483647,
+        "override_upload_bolvia_signed_url": false,
+        "request_scrap_order_reason": false,
+        "enable_battery_manager": false,
+        "enable_battery_order": false
+      },
+      "trips": {
+        "enable_training_modals": false,
+        "enabled": false
+      },
+      "wake_birds": {
+        "bulk_wake_max_retries": 0,
+        "bulk_wake_max_vehicles": 10,
+        "enable_batch_wake": false,
+        "enable_bulk_scanner_wake": false,
+        "enable_hibernate": false,
+        "enable_sleep_individual": false,
+        "enable_sleep_powerline": true,
+        "enable_sweep_wake": false,
+        "enable_sweep_wake_for_partners": false,
+        "enable_wake_individual": false,
+        "enabled": false,
+        "force_sleep_battery_threshold": 50,
+        "hibernation_batch_frequency": "never"
+      },
+      "work_orders": {
+        "enable_inspection": false,
+        "enable_repair": false,
+        "enable_work_order_history": false,
+        "inspection_flow": "legacy",
+        "past_work_orders_display_count": 3,
+        "repair_flow": "legacy",
+        "enable_limited_inspection": false
+      },
+      "zone_map": {
+        "enable": false,
+        "zone_pin_zoom_threshold": 11
+      },
+      "claims": {
+        "enabled": true,
+        "claim_duration_minutes": 15,
+        "claim_cooldown_minutes": 30
+      }
+    },
+    "permissions": {
+      "require_background_app_refresh": false,
+      "require_bluetooth": false,
+      "require_camera": false,
+      "require_location_services": false,
+      "require_location_services_always": false,
+      "require_notifications": false
+    },
+    "side_menu_title": "Operator",
+    "enable_peacock": true
+  },
+  "payment": {
+    "charge_auto_pay_updates_at_or_less_than_zero_balance": true,
+    "enable_paypal": false,
+    "paypal_default_on_preload": false,
+    "use_stripe_intents": true,
+    "use_unified_payment_endpoints": false,
+    "enable_remove_cards_on_v2": true,
+    "preload_default_options": [
+      "apple_google_pay",
+      "card"
+    ],
+    "connected_account_id": "acct_1AXthsFnWIVhvQ7p",
+    "enable_google_pay_bonus": false,
+    "google_pay_bonus_amount": 0,
+    "enable_cash_pay": true,
+    "self_balance_refund": {
+      "enabled": true,
+      "zendesk_article_id": "360044137251"
+    },
+    "card_scanner_style": "in_house_scanner_first",
+    "onboarding_quick_payment": true,
+    "onboarding_quick_payment_style": "v2",
+    "payment_settings_v2": true,
+    "bank_redirect": {},
+    "payment_method_to_provider": {
+      "card": "stripe",
+      "google_pay": "stripe"
+    },
+    "adyen": {},
+    "reload": {
+      "preload_ui_version": "choose_ppr_before_plans"
+    },
+    "suggest_paypal_on_payment_add_error": false,
+    "stripe_error_config": {
+      "use_dynamic_error_messages": true,
+      "use_dynamic_messages_for_setup_intent": true,
+      "use_generic_decline_error": false,
+      "generic_decline_message": "We're sorry, your card was declined for an unknown reason. Please contact your bank for details and try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+      "error_code_messages": {
+        "insufficient_funds": "Your transaction couldn’t be completed because there weren’t enough funds or credit to cover the charge. Please try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "do_not_honor": "Oops, your card issuer declined your payment for an unknown reason. Please contact your bank for details and try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "transaction_not_allowed": "Sorry, your card was declined for an unknown reason. Please contact your bank for details and try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "incorrect_number": "Your card was declined because the card number is invalid. Please try again with the correct card number or try a different payment method.",
+        "try_again_later": "Your card was declined for an unknown reason. Please try again. If you see this error multiple times please contact your bank for details and try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "invalid_account": "Your card was declined because the card or account is invalid. Please contact your bank for details and try a different payment method.",
+        "generic_decline": "We're sorry, your card was declined for an unknown reason. Please contact your bank for details and try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "expired_card": "Your card was declined because it is expired. Please update the expiration date or try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "authentication_required": "Your card was declined because the transaction requires verification. Please try again and authenticate when prompted. If the issue persists please contact your bank for details and try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "pickup_card": "Your card was declined. Please contact your bank for details and try a different payment method.",
+        "stolen_card": "Your card was declined. Please contact your bank for details and try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "approve_with_id": "Your card was declined. Please try again. If you see this error multiple times please contact your bank for details and try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "call_issuer": "Your card was declined for an unknown reason. Please contact your bank for details and try a different payment method.",
+        "card_not_supported": "Your card was declined because it does not support this type of purchase. Please contact your bank for details and try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "card_velocity_exceeded": "Your card was declined. Please contact your bank for details and try a different payment method.",
+        "currency_not_supported": "Your card was declined because it does not support this currency. Please contact your bank for details and try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "do_not_try_again": "Your card was declined for an unknown reason. Please contact your bank for details and try a different payment method.",
+        "duplicate_transaction": "Your card was declined because it appears to be a duplicate transaction. Please take a screenshot and contact support to inform them of this error.",
+        "fraudulent": "Your card was declined for an unknown reason. Please contact your bank for details and try a different payment method.",
+        "incorrect_cvc": "Your card was declined because the security code is incorrect. Please update the security code by going to the menu, selecting ‘Payment,’ and then re-adding the payment method with the correct code.  If this doesn't work, then please choose an alternative payment method.",
+        "incorrect_pin": "Your card was declined because the PIN is incorrect. Please update the PIN and try again, or try a different payment method.",
+        "incorrect_zip": "Your card was declined due to a mismatch between the postal code entered and the one on file with your bank for this card. Please update the postal code to match what is on file with your bank by going to the menu, selecting &lsquo;Payment,&rsquo; and then re-adding the payment method with the correct postal code. If this doesn't work, then please choose an alternative payment method.",
+        "invalid_amount": "Your card was declined because there is an issue with the amount. Please verify with your bank that you can make a purchase of this amount and try again, or try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "invalid_cvc": "Your card was declined because the security code is incorrect. Please try again or try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "invalid_expiry_month": "Your card was declined because the expiration month is incorrect. Please update the expiration month or try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "invalid_expiry_year": "Your card was declined because the expiration year is incorrect. Please update the expiration year or try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "invalid_number": "Your card was declined because the card number is invalid. Please try again or try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "invalid_pin": "Your card was declined because the PIN is incorrect. Please try again or try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "issuer_not_available": "Your card was declined because we were unable to reach your bank. Please try again by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method. If you see this error multiple times please contact your bank for details.",
+        "lost_card": "Your card was declined for an unknown reason. Please contact your bank for details and try a different payment method.",
+        "merchant_blacklist": "Your card was declined for an unknown reason. Please contact your bank for details and try a different payment method.",
+        "new_account_information_available": "Your card was declined because the card or account is invalid. Please contact your bank for details and try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "no_action_taken": "Your card was declined for an unknown reason. Please contact your bank for details and try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "not_permitted": "Your card was declined because your bank did not permit. Please contact your bank for details and try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "offline_pin_required": "Your card was declined because a PIN was not provided. Please enter the PIN and try again, or try a different payment method.",
+        "online_or_offline_pin_required": "Your card was declined because a PIN was not provided. Please try again or try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method.",
+        "pin_try_exceeded": "Your card was declined. Please contact your bank for details and try a different payment method.",
+        "processing_error": "An error occurred while processing your payment. Please try again. If you see this error multiple times try a different payment method.",
+        "reenter_transaction": "An error occurred while processing your payment. Please try again by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method. If you see this error multiple times please contact your bank for details.",
+        "restricted_card": "Your card was declined. Please contact your bank for details and try a different payment method.",
+        "revocation_of_all_authorizations": "Your card was declined for an unknown reason. Please contact your bank for details and try a different payment method.",
+        "revocation_of_authorization": "Your card was declined for an unknown reason. Please contact your bank for details and try a different payment method.",
+        "security_violation": "Your card was declined for an unknown reason. Please contact your bank for details and try a different payment method.",
+        "service_not_allowed": "Your card was declined for an unknown reason. Please contact your bank for details and try a different payment method.",
+        "stop_payment_order": "Your card was declined for an unknown reason. Please contact your bank for details and try a different payment method.",
+        "testmode_decline": "Your card was declined because a Stripe test card was used. Please try again with a valid credit card.",
+        "withdrawal_count_limit_exceeded": "Your card was declined. Please try a different payment method by going to the menu, selecting ‘Payment,’ and then choosing an alternative payment method."
+      }
+    },
+    "atrium": {
+      "enabled": false,
+      "university_id": "",
+      "university_name": "",
+      "currency_name": "",
+      "university_sso_url": ""
+    },
+    "default_to_native_pay": false,
+    "stripe_payment_sheet_config": {
+      "enabled": true,
+      "payment_method_configuration_id": "pmc_1KQZIJFnWIVhvQ7pqCezVJeY",
+      "google_pay_country_code": "US",
+      "allow_delayed_payment_methods": true,
+      "allow_native_pay_option": true,
+      "custom_payment_methods": []
+    },
+    "enable_apple_pay_merchant_tokens": false
+  },
+  "photo_upload": {
+    "bird_watcher_compression_quality": 85,
+    "bird_watcher_target_width": 1024,
+    "cannot_access_compression_quality": 85,
+    "cannot_access_target_width": 1024,
+    "community_compression_quality": 85,
+    "community_target_width": 1024,
+    "complaint_compression_quality": 85,
+    "complaint_target_width": 1024,
+    "default_compression_quality": 65,
+    "drop_compression_quality": 85,
+    "drop_target_width": 1024,
+    "lock_issue_compression_quality": 85,
+    "lock_issue_target_width": 1024,
+    "priority_collect_compression_quality": 85,
+    "priority_collect_target_width": 1024,
+    "ride_compression_quality": 85,
+    "ride_target_width": 1024
+  },
+  "pill_button_config": {},
+  "platform": {
+    "enable_partners": false,
+    "show_partners_on_rider_map": false
+  },
+  "prefer_chirp_alarm_over_chirp_command": false,
+  "pricing_ui": {
+    "enabled": false,
+    "enable_scanner_tap_to_see_pricing": false,
+    "flight_bar_pricing": {
+      "enabled": true
+    }
+  },
+  "private_bird": {
+    "show_range_instead_of_battery_percentage": false,
+    "max_distance_to_show_annotation_meters": 300.0,
+    "use_bird_user_actions": false,
+    "scan_for_smartlock_in_foreground": false,
+    "ownable_birds_navigate_to_details_screen_when_selected": false,
+    "enable_my_bird_screen_renters": false,
+    "enable_my_bird_screen_owners": true,
+    "bird_air_firmware": {},
+    "ad_hoc_pairing": {
+      "allowed_models": {
+        "rb1": true,
+        "hje": true
+      }
+    }
+  },
+  "promo": {
+    "enable_promos": true,
+    "hide_earn_section": false,
+    "ignore_unactivated": false
+  },
+  "release_end_hour": 24.0,
+  "release_start_hour": 0.0,
+  "request_end_ride_photo": true,
+  "require_drivers_license": false,
+  "require_ride_end_photo_to_end_ride": false,
+  "required_ride_end_photo_upload_timeout": 10,
+  "reservation": {
+    "enable_ride_reservation": true,
+    "enable_new_users": true,
+    "enable_reserve_intro_new_users": false,
+    "maximum_reservation_duration_minutes": 30,
+    "base_price": 0,
+    "minute_price": 50,
+    "currency": "usd",
+    "enable_free_reservations": false,
+    "enable_reserve_promo_on_bad_scan": false,
+    "enable_reserve_promo_on_cancelled_ride": false,
+    "enable_reserve_promo_on_low_battery_cancelled_ride": false,
+    "reserve_promo_offer_duration": 900,
+    "reserve_promo_reservation_duration": 900,
+    "user_max_distance_from_vehicle_to_start_ride": 50
+  },
+  "ride": {
+    "accept_provisional_id": true,
+    "account": {
+      "enabled": true
+    },
+    "additional_fees": {
+      "apply_tax": true,
+      "fees": [],
+      "hide_tax_in_pricing_description": false,
+      "show_non_tax_fee_details_in_pricing_description": true
+    },
+    "aggressive_end_ride_lock": true,
+    "auth_hold_description_zendesk_article_id": "17879020799124",
+    "auto_pay_incentive_amount": 0,
+    "auto_pay_mandatory": false,
+    "auto_pay_mandatory_min_balance": 0,
+    "auto_pay_nag_every_ride_count": 0,
+    "auto_pay_prompt_first": false,
+    "auto_pay_refill_amount": 0,
+    "auto_pay_start_after_ride_count": -1,
+    "auto_pay_use_fullscreen_flow": false,
+    "base_price": 150,
+    "client_location_heuristic": "feasible_user_location",
+    "connectivity_banner": {},
+    "currency": "usd",
+    "disable_end_ride_photo_middle_icon": false,
+    "display_brand_name_in_ride_receipt": false,
+    "dispute": {
+      "enabled": true,
+      "zendesk_article_id": "5723773682324"
+    },
+    "enable_android_scan_to_ride": true,
+    "enable_chat_bot_browser": false,
+    "enable_chirp_on_scanless_ride_start": false,
+    "enable_detailed_vehicle_info": false,
+    "enable_free_unlock_after_bad_scan": false,
+    "enable_free_unlock_after_cancelled_ride": false,
+    "enable_free_unlock_after_low_battery_ride": false,
+    "enable_location_opt_out": true,
+    "enable_map_areas_by_fleet": false,
+    "enable_multi_modal_map_pins": true,
+    "enable_multi_modal_map_pins_in_ride": false,
+    "enable_multi_modal_tutorial_button": false,
+    "enable_multi_modal_tutorial_selection": false,
+    "enable_outside_service_area_parking_ticket": false,
+    "enable_outside_service_area_parking_ticket_accept_fine": false,
+    "enable_owner_mode": false,
+    "enable_ride_start_outside_operating_area": false,
+    "enable_ride_without_location_services": true,
+    "enable_scanless_reserved_ride_start": true,
+    "enable_scanner_code_entry_tooltip": true,
+    "enable_scanner_code_entry_v2": true,
+    "enable_single_auth_for_positive_balance": true,
+    "end_ride": {
+      "wait_for_foreground_areas_seconds": 10.0,
+      "wait_for_foreground_config_seconds": 10.0,
+      "wait_for_foreground_location_seconds": 10.0,
+      "wait_for_foreground_parking_nests_seconds": 10.0
+    },
+    "filter_nests_by_bird": false,
+    "force_client_tracks": false,
+    "force_client_tracks_by_model": [
+      "bd"
+    ],
+    "helmet_selfie": {},
+    "hide_agreement_scroll_hint": true,
+    "hospitality": {
+      "enabled": false
+    },
+    "included_minutes": 0,
+    "localized_dynamic_price_string": "$1.50 to start and $0.50/minute + tax.",
+    "max_bird_code_length": 7,
+    "max_ride_duration_no_ride_zone": 300,
+    "max_ride_duration_outside_operating_area": 180,
+    "maximum_free_ride_amount": 500,
+    "min_bird_code_length": 4,
+    "min_rider_age": 18,
+    "minimum_ride_price": 0,
+    "minimum_user_balance": -500,
+    "minute_price": 50,
+    "must_park_in_nest": false,
+    "outside_service_area_parking_ticket_amount": 0,
+    "peacock": {
+      "disable_legacy_ride_end_report": true,
+      "enable_rider_map": true,
+      "enable_ride_pass_ui": true,
+      "enable_ride_end_photo": true,
+      "enable_ride_end_summary": true,
+      "enable_promotions_center": false,
+      "enable_transaction_history": true,
+      "enable_ride_detail": true,
+      "enable_scan_sheet": false,
+      "onboarding_strategy": "card_only",
+      "enable_bottom_sheets": false,
+      "enable_live_activity": false
+    },
+    "prefer_chirp_alarm_on_scanless_ride_start": false,
+    "price_change_exp_in_treatment_group": false,
+    "request_background_location_on_scan": false,
+    "safe_ride_start": {
+      "enable_reaction_time_test": false,
+      "enabled": false,
+      "reaction_time_max_attempts": 3,
+      "reaction_time_max_threshold_millis": 750,
+      "reaction_time_retry_minutes": 60,
+      "reaction_time_targets_max": 7,
+      "reaction_time_targets_min": 4
+    },
+    "scanner_code_entry_tooltip_localized_copy": "Tap to enter code",
+    "scanner_code_entry_tooltip_max_duration": 10,
+    "scanner_code_entry_tooltip_max_entries": 1,
+    "scanner_code_entry_tooltip_max_views": 3,
+    "self_help": {
+      "contact_support_in_app": false,
+      "enabled": true,
+      "enable_other_issues": true,
+      "other_issues_in_app": false,
+      "recent_rides_count": 5,
+      "enable_ai_self_help": false,
+      "enable_ai_chatbot_within_self_help": true,
+      "enable_rider_agent_chat": false
+    },
+    "show_end_ride_parking_rules": false,
+    "smartlock": {
+      "unlock_available_post_ride_by_purpose_seconds": {
+        "lock_to": 0,
+        "helmet": 20,
+        "helmets": 30
+      },
+      "zendesk_article_id_by_purpose": {
+        "helmet": 360031019151
+      }
+    },
+    "smartlock_cable_lock_flow_image_url": [],
+    "smartlock_cable_unlock_flow_image_url": [],
+    "warning": {
+      "enable_ride_state_banner": false,
+      "enable_rider_annotation_pills": true,
+      "end_ride_warning_presentation_kind": "alert",
+      "foreground_focus_warning_presentation_kind": "none",
+      "pin_tap_warning_presentation_kind": "alert"
+    },
+    "use_ride_pricing_api": true,
+    "remote_ride_start_distance_threshold_meters": 100.0
+  },
+  "ride_pass": {
+    "enable_tax": true,
+    "enabled": true,
+    "enabled_v2": true,
+    "sessions_shown": 10000
+  },
+  "rider_home_area_prompt": {
+    "enabled": false
+  },
+  "rider_map": {
+    "client_bird_geocache_config": {
+      "cell_level": 12,
+      "enabled": true,
+      "expiry_seconds": 60,
+      "query_limit": 16
+    },
+    "client_nest_geocache_config": {
+      "cell_level": 13,
+      "enabled": true,
+      "expiry_seconds": 60,
+      "query_limit": 16
+    },
+    "client_zone_geocache_config": {
+      "cell_level": 12,
+      "enabled": true,
+      "expiry_seconds": 60,
+      "query_limit": 16
+    },
+    "disable_marker_rendering_outside_viewbounds": true,
+    "enable_mini_pins": true,
+    "enable_optimized_map_renderer": true,
+    "enable_user_location_v2": true,
+    "max_parking_markers_to_render": 300,
+    "max_vehicle_markers_to_render": 150,
+    "mini_pins_zoom_level_threshold": 16.0,
+    "rider_show_areas_before_selecting_vehicle": true,
+    "scan_button_style": "qr_scan",
+    "show_battery_percentage": true,
+    "show_group_ride_button": true,
+    "show_range_instead_of_battery_percentage": true,
+    "use_native_annotations": true,
+    "zone_color_override": {
+      "operational": {
+        "fill_color": {
+          "light_mode": 1074506992
+        },
+        "border_color": {
+          "light_mode": 2551792
+        }
+      },
+      "no_ride": {
+        "fill_color": {
+          "dark_mode": 1073741824,
+          "light_mode": 1609452331
+        },
+        "border_color": {
+          "dark_mode": 0,
+          "light_mode": 16712451
+        },
+        "title_color": {
+          "dark_mode": 8505,
+          "light_mode": 8505
+        }
+      },
+      "no_parking": {
+        "fill_color": {
+          "dark_mode": 653943888,
+          "light_mode": 1597392207
+        },
+        "border_color": {
+          "dark_mode": -367536,
+          "light_mode": 3556687
+        },
+        "title_color": {
+          "dark_mode": 8505,
+          "light_mode": 8505
+        }
+      },
+      "slow": {
+        "fill_color": {
+          "dark_mode": 654292332,
+          "light_mode": 1610606080
+        },
+        "border_color": {
+          "dark_mode": 16758124,
+          "light_mode": 16770560
+        },
+        "title_color": {
+          "dark_mode": 8505,
+          "light_mode": 8505
+        }
+      },
+      "parking": {
+        "fill_color": {
+          "light_mode": 1070138240
+        },
+        "border_color": {
+          "light_mode": 30175
+        }
+      },
+      "preferred_parking": {
+        "fill_color": {
+          "light_mode": 1594409020
+        },
+        "border_color": {
+          "light_mode": 576316
+        }
+      }
+    }
+  },
+  "rider_profile": {
+    "beginner_mode_max_rides": 3,
+    "enable_beginner_mode_by_model": {
+      "rf": true,
+      "b2": true,
+      "b3": true
+    },
+    "enable_beginner_mode_onboarding": true,
+    "enable_toggle_in_ride": false,
+    "enable_toggle_out_of_ride": true,
+    "rider_map_toggle_max_rides": 3
+  },
+  "rider_tutorial": {
+    "all": [],
+    "class_moped": [
+      "moped_intro",
+      "moped_helmet",
+      "moped_double_riding",
+      "moped_kickstand_release",
+      "moped_accelerating",
+      "moped_brakes",
+      "moped_where_to_ride",
+      "moped_park",
+      "moped_tow_zones",
+      "moped_kickstand_engage",
+      "local_rule"
+    ],
+    "class_moped_parking": [
+      "moped_park",
+      "moped_tow_zones"
+    ],
+    "class_scooter": [
+      "kick_scooter_safe_riding",
+      "kick_scooter_accelerating",
+      "kick_scooter_brakes",
+      "kick_scooter_where_to_ride",
+      "kick_scooter_park",
+      "local_rule"
+    ],
+    "class_scooter_parking": [
+      "kick_scooter_park"
+    ],
+    "contextual_b2": [
+      "kick_scooter_safe_riding",
+      "kick_scooter_kickstand_release",
+      "kick_scooter_accelerating",
+      "kick_scooter_brakes",
+      "kick_scooter_where_to_ride",
+      "kick_scooter_kickstand_engage",
+      "kick_scooter_park",
+      "local_rule"
+    ],
+    "contextual_b3": [
+      "kick_scooter_safe_riding",
+      "kick_scooter_kickstand_release",
+      "kick_scooter_accelerating",
+      "kick_scooter_brakes",
+      "kick_scooter_where_to_ride",
+      "kick_scooter_kickstand_engage",
+      "kick_scooter_park",
+      "local_rule"
+    ],
+    "contextual_bc": [
+      "moped_intro",
+      "moped_helmet",
+      "moped_double_riding",
+      "moped_kickstand_release",
+      "moped_accelerating",
+      "moped_brakes",
+      "moped_where_to_ride",
+      "moped_park",
+      "moped_tow_zones",
+      "moped_kickstand_engage",
+      "local_rule"
+    ],
+    "contextual_es": [],
+    "contextual_m365": [],
+    "parking": [],
+    "steps": []
+  },
+  "safety_menu_url": "https://www.bird.co/safety/",
+  "save_money": {
+    "enabled": false
+  },
+  "security": {
+    "device_verification": {
+      "endpoints": {
+        "recaptcha_blocking": {
+          "action": "add_card",
+          "enabled": true,
+          "http_method": "post",
+          "log_only_if_device_check_failed": false,
+          "path": "/v1/payment/provider/card",
+          "service": "bird",
+          "strategy": "first_available",
+          "verification_methods": [
+            "recaptcha_enterprise",
+            "firebase_appcheck"
+          ]
+        }
+      },
+      "recaptcha": {
+        "site_key": "6LeXYz0eAAAAAPKX9-lUoAfq1gxH7LncglpT6fEq"
+      }
+    }
+  },
+  "selected_area_alpha_difference": 0.0,
+  "service_center": {
+    "batch_actions": {
+      "add_to_batch": false,
+      "create_batch": false,
+      "enabled": false,
+      "view_all_batches": false
+    },
+    "bulk_progress": {
+      "enable_charging": false,
+      "enable_hibernation": false,
+      "enable_hibernation_create_batch": false,
+      "hibernate_min_battery": 40
+    },
+    "download_assets": false,
+    "enable_bluetooth_locks": false,
+    "enable_bulk_service_center_status": false,
+    "enable_enter_location_modal": false,
+    "enable_repair_log": false,
+    "enable_service_center_app": false,
+    "enable_service_center_picker": false,
+    "enable_service_center_status": false,
+    "enable_wake_sleep_birds": false,
+    "entry_routing": {
+      "enabled": false
+    },
+    "hard_count": {
+      "enabled": false
+    },
+    "inspection": {
+      "hide_issue_details": false
+    },
+    "inventory": {
+      "enable_excess_inventory_modal": false,
+      "enable_inventory_count_update": false,
+      "enable_kanban_inventory_count_update_v1": false
+    },
+    "quality_control": {
+      "enabled": false,
+      "flow": "list",
+      "programmatic_qc_enabled": false
+    },
+    "routing_on_rails": {
+      "enabled": false
+    },
+    "scrap": {
+      "enabled": false
+    },
+    "validate_warehouse": false,
+    "whitelist": false
+  },
+  "shop": {
+    "buy_a_bird_in_side_menu": false,
+    "buy_a_bird_menu_name": "Bird One"
+  },
+  "show_charge_task_limit": false,
+  "show_nest_release": true,
+  "show_physical_lock_last_compliant_modal": false,
+  "show_physical_lock_last_non_compliant_modal": false,
+  "show_price_carousel_on_scanner": false,
+  "show_price_change_notification_modal": false,
+  "show_price_on_scanner": "onpricechange",
+  "stp_billing_address_requirement": 1,
+  "supercharger": {
+    "enable_supercharger": false,
+    "enable_updated_post_capture_requirement_failure_popup": false,
+    "enable_updated_post_claim_requirement_failure_popup": false,
+    "mark_missing_bird_finder_required_interval_seconds": 10,
+    "mark_missing_threshold_radius_meters": 100.0,
+    "user_tracks_bluetooth_scan_duration_seconds": 5,
+    "user_tracks_reporting_period_seconds": 30
+  },
+  "tax_id": {
+    "mask": "XXX-XX-XXXX",
+    "name": "SSN"
+  },
+  "tax_information": {
+    "country_name": "United States",
+    "enable_compliant_receipts": true,
+    "enable_settings_button": false,
+    "enable_signup_flow_autosubmit_no": false,
+    "enable_signup_flow_screen": false,
+    "show_signup_flow_skip_button": false
+  },
+  "test": {},
+  "test_feature": {
+    "android_min": "1.0.0",
+    "ios_min": "1.0.0"
+  },
+  "thin_client": {
+    "enabled": true,
+    "how_to_ride_zendesk_article_id": "360031012911"
+  },
+  "tutorial_v2": {
+    "enabled": true
+  },
+  "update_bt_max_speed_by_model": [
+    "rf",
+    "b2",
+    "bd"
+  ],
+  "use_banner_prioritization": true,
+  "use_billed_minutes_for_ride_time": true,
+  "user_interface": {
+    "enable_ride_transactions_v2": true,
+    "enable_user_settings_v2": true,
+    "show_number_in_rating_stars": true
+  },
+  "user_tracking": {
+    "bluetooth_scan_duration_seconds": 5,
+    "enabled": true,
+    "track_interval_seconds": 60,
+    "show_app_tracking_prompt": false
+  },
+  "views": {
+    "receipt": {
+      "show_download_invoice_button": true
+    }
+  },
+  "zendesk": {
+    "web_help_center": {
+      "enabled": true,
+      "flyer_help_center_url": "https://birdflyer.zendesk.com",
+      "launch_in_external_browser": false,
+      "operator_help_center_url": "https://birdb2b.zendesk.com",
+      "rider_help_center_url": "https://help.bird.co"
+    }
+  },
+  "zigzag": {
+    "enabled": false
+  },
+  "hide_missing_threshold": 2
+}
