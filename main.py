@@ -8,9 +8,17 @@ from geopy.geocoders import Nominatim
 # allow user spesify lat/lon
 # integrate cordintate module (to get user location)
 
-#default cords
-latitude = 38.8845454
-longitude = -77.122171
+address = input("Enter a zip code In the US or address (or 'enter' to input lat/lon manually): ")
+if address:
+    geolocator = Nominatim(user_agent="bird_api_choir")
+    location = geolocator.geocode(address + ", USA")
+    latitude = location.latitude
+    longitude = location.longitude
+else:
+    latitude = input("Enter latitude (or hit `enter` to use default): ") or 38.8845454
+    longitude = input("Enter longitude (or hit `enter` to use default): ") or -77.122171
+
+print("target cords: ",latitude, longitude)
 
 location_data = {
     "latitude": latitude,
