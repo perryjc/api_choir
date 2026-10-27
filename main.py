@@ -1,14 +1,20 @@
 import requests
 import json
 import sys
+import geopy
+from geopy.geocoders import Nominatim
 
 # TODO:
 # allow user spesify lat/lon
 # integrate cordintate module (to get user location)
 
+#default cords
+latitude = 38.8845454
+longitude = -77.122171
+
 location_data = {
-    "latitude": 38.8845454,
-    "longitude": -77.122171,
+    "latitude": latitude,
+    "longitude": longitude,
     "heading": None,
     "speed": None,
     "altitude": 60.81604766845703,
@@ -46,8 +52,8 @@ headers = {
 
 nearby_payload = {
     "map_center": {
-        "latitude": 38.88454525398748,
-        "longitude": -77.12217086926103,
+        "latitude": latitude,
+        "longitude": longitude,
         "mocked": "false",
         "timestamp": "1969-12-31T19:00:00.000-05:00",
         "source": ""
