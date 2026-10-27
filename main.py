@@ -21,8 +21,9 @@ else:
 print("target cords: ",latitude, longitude)
 
 chirp_type = input("DEBUG: enable alarm (y/n): ")
-if chirp_type.lower() == "y":
+if chirp_type.lower() == "y" or chirp_type.lower() == "yes":
     alarm = True
+    print("alarm enabled")
 else:
     alarm = False
 
@@ -61,7 +62,7 @@ headers = {
     "App-Name": "bird",
     "App-Type": "operator",
     "Role": "operator",
-    "Authorization": "Bearer eyJhbGciOiJSUzUxMiJ9.eyJqdGkiOiI0YTc1ODcyMi0wYTJiLTQyNjMtOTM5Ni02ZmFiMjIzMTIxMjIiLCJzdWIiOiI1ZjM4OWI4Mi0yOTE0LTQ4MmItOTdhOC03MzI4NGM1ODczOGUiLCJuYmYiOjE3OTMwNDMxNzcsImV4cCI6MTc5MzEyOTU3NywiYXVkIjoiYmlyZC5zZXJ2aWNlcyIsImlzcyI6ImJpcmQuYXV0aCIsImlhdCI6MTc5MzA0MzE3Nywicm9sZXMiOlsiVVNFUiJdLCJhcHAiOiI3YjhlZDk1NS02ZTNhLTRlZWMtYmEyMC04OGFmOWQ3YWVhNzYiLCJ2ZXIiOiIwLjAuMiJ9.CjOXvHwXO6koBAt2dBvV_ckWccCrlg7kjXLjFHxh23Xf1wBTo9EUsnPZINk-pKNj04r_86RyQLtoYNJdwtrvOl75hitEd03hyGgC8zZjMK2kpJWeSEbQhT_W7SRuxlLHlEroCmXQjH6MWTa5mEHd6Eo3xseXCBjF3HFhr_RpE5JwJ5jp0YNsCSDhOJ6izt07qjzbdEgnXvOaKY7wFIhHSYvIROJ6Mr3z51wQOQr05JB440pNqdThtTXy8LdxDB5ABcV42PYXtgnE0-hEtzN4Hsp1vQplJhBskkD4mORXTrVjqBVL433t1lFOruq5JQEErZ3QIfRumUhOjm82nlEuqACBnwsQtMPe1oY8BqUVD8y-uiFzsQ7PBW-dcPJysT471bz1USkt3IWiveqaEjESn9TyU8nuPo1ecqALB9z4iukE8rjO4avsKFk2wcHpBnuev0Y3rAZt-wikK6KxLG_MUEsAdQC5J84ABdU7NJR0s1jNzeljThVzvF_1Td8XAKxZQjJyhKJXVYchzaNAwGK_9EbjY6bz17IcTJZAtiLWAv2o2dtYVlCtbvOZSVC8HL7gCUxvxOw5Z1Ov9lAdmgg6K7yFgEC0_8BPx8Ujvy5quwZGe-fyFfGjf2Ap7l_CXHwoDFxilpRWhPy-ZdidinGH9FrzW1EH0PhesqvGQZoseFg"
+    "Authorization": "Bearer eyJhbGciOiJSUzUxMiJ9.eyJqdGkiOiIwYWY4ODcwZC01MWI1LTQ4MDgtOWRlYy02NGViNWY0NDdjMzUiLCJzdWIiOiI1ZjM4OWI4Mi0yOTE0LTQ4MmItOTdhOC03MzI4NGM1ODczOGUiLCJuYmYiOjE3OTMxMjYyNTcsImV4cCI6MTc5MzIxMjY1NywiYXVkIjoiYmlyZC5zZXJ2aWNlcyIsImlzcyI6ImJpcmQuYXV0aCIsImlhdCI6MTc5MzEyNjI1Nywicm9sZXMiOlsiVVNFUiJdLCJhcHAiOiI3YjhlZDk1NS02ZTNhLTRlZWMtYmEyMC04OGFmOWQ3YWVhNzYiLCJ2ZXIiOiIwLjAuMiJ9.bztzkksgcMgHzAQoiDdGBEHtLBRwmc4PW1JZFjJuiZcjPAkeTZkPgzx9Xujjbcvl-w15PFtlhIHh5d39tmslVqH2IhqwlHqtkhp_rSr4L7_mp1CWpDVbHbRr595FBzayK3A0eUs1w2EPUQcYOIRaaZ9eKoxvDz_tlIRd05h1vwGXRPkTKEdYODYHHps5N5FtAqub7Dh5pYJEFTBF141G2jq15oBeG02PSM7wfmmuUsf-wMhP_tcYXzKjoZUBmqmJ7MPqNbUiywuz7nRXrsMtpCATWCjYG-onR5AWjyuEdzOCHJH_sdrI81USzfYD0AqErOdr_-B06ksAHQVpNFH2f_FMdXcwcMoU4QsHUvYl_KB_xXjM2j-roFyP_uPxwPUzhLkAZt3mYv9u8mAHU0GXJQqPIRM1VQlzfsXZ5Tcp-f8dmbRzOvMPop6jwSn0Y-574QJqJf7T_a87zunkCgMR9mL6p7TTo8VJmegXT27p3IPAzPCkp9aqOpVfhK-Dxbk3e6uCi8Nf-4YedYZpqD-cBlP6MP8zwkr4b9gIQDnk1dGAVzRvGMqpTbdoB8jT52UWzs5NgDSAC3KRKTqwujsINZ8MpxuxK5EYy7bxtWWCebOgfSoggyf6iJ4R36iSykxDi2Pt9zQp4n-PAhyDwHijv8YvfJD882txmCH8QddIJQE"
 }
 
 nearby_payload = {
@@ -99,10 +100,10 @@ def verify_headers(url, headers):
 base_url = "https://api-bird.prod.birdapp.com"
 nearby_url = base_url + "/bird/nearby-by-cells"
 chirp_url = base_url + "/bird/chirp"
-config_url = base_url + "/config"
+user_url = base_url + "/user"
 
 check_connection("https://bird.co/")
-verify_headers(config_url, headers)
+verify_headers(user_url, headers)
 
 print("Starting chirp requests...")
 response = requests.post(nearby_url, headers=headers, json=nearby_payload)
