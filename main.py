@@ -20,6 +20,12 @@ else:
 
 print("target cords: ",latitude, longitude)
 
+chirp_type = input("DEBUG: enable alarm (y/n): ")
+if chirp_type.lower() == "y":
+    alarm = True
+else:
+    alarm = False
+
 location_data = {
     "latitude": latitude,
     "longitude": longitude,
@@ -107,7 +113,7 @@ bird_ids = [bird["id"] for bird in nearby_data["birds"]]
 
 for x in range(len(bird_ids)):
     chirp_payload = {
-        "alarm": True,
+        "alarm": alarm,
         "bird_id": bird_ids[x]
     }
     chirp_response = requests.put(chirp_url, headers=headers, json=chirp_payload)
