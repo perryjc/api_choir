@@ -1,9 +1,9 @@
 import requests
 import json
 import sys
+
 # TODO:
 # allow user spesify lat/lon
-# check header function
 # integrate cordintate module (to get user location)
 
 location_data = {
@@ -67,12 +67,22 @@ def check_connection(url):
         print("Connection failed with status code:", response.status_code)
         sys.exit()
 
+def verify_headers(url, headers):
+    print("Verifying headers...")
+    response = requests.get(url, headers=headers, timeout=5)
+    if response.status_code == 200:
+        print("Headers are valid")
+    else:
+        print("Header verification failed with status code:", response.status_code)
+        sys.exit()
 
 base_url = "https://api-bird.prod.birdapp.com"
 nearby_url = base_url + "/bird/nearby-by-cells"
 chirp_url = base_url + "/bird/chirp"
+config_url = base_url + "/config"
 
 check_connection("https://bird.co/")
+verify_headers(config_url, headers)
 
 print("Starting chirp requests...")
 response = requests.post(nearby_url, headers=headers, json=nearby_payload)
