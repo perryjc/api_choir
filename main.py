@@ -107,8 +107,8 @@ bird_ids = [bird["id"] for bird in nearby_data["birds"]]
 
 for x in range(len(bird_ids)):
     chirp_payload = {
-        "bird_id": bird_ids[x],
-        "alarm": True
+        "alarm": True,
+        "bird_id": bird_ids[x]
     }
     chirp_response = requests.put(chirp_url, headers=headers, json=chirp_payload)
     chirp_data = chirp_response.json()
