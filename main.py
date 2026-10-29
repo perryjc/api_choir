@@ -23,11 +23,12 @@ user_coords = (latitude, longitude)
 print("target cords: ",latitude, longitude)
 
 chirp_type = input("DEBUG: enable alarm (y/n): ")
-if chirp_type.lower() == "y" or chirp_type.lower() == "yes":
+if chirp_type.lower() == "n" or chirp_type.lower() == "no":
+    alarm = False
+    print("alarm disabled")
+else:
     alarm = True
     print("alarm enabled")
-else:
-    alarm = False
 
 location_data = {
     "latitude": latitude,
@@ -78,9 +79,12 @@ nearby_payload = {
     "cell_ids": [
         # NEED TO ADD A CALL THAT FINDS CELL IDS FROM USER LAT/LON
         # POST to /nest/parking-nests-by-cell with i think this payload
+        # or just added manually (witch is what i did. but will fail if its supposed dynamic)
         "-8523145651523944448",
         "-8523145514084990976",
-        "-8523142902744875008"
+        "-8523142902744875008",
+        "-8523142851205267456",
+        "-8523142885565005824"
     ]
 }
 
