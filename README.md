@@ -8,6 +8,7 @@
 - [x] ignore every scooter with "battery_level": 0 (i have no clue but nearby_data has no dead ones)
 - [ ] make output look more pretty when interupted
 - [ ] identify responce codes (check for ratelimit or invalid prams)
+- [ ] add more debug logs
 - [ ] add ascii art when script is ran
 - [ ] display options user selected and then ask "do you want to continue?"
 - [ ] split diffrent steps of the script into seprate files
@@ -17,7 +18,7 @@
 - [ ] add script breakdown/walkthrough
 - [ ] talk about apk mods that enable chucker among other things
 - [ ] make output ... (i forgot)
-- [ ] make output show the 5 character code of each chirped scooter
+- [x] make output show the 5 character code of each chirped scooter
 - [ ] add function that takes user email and makes auth token, insted of mine (POST to "/api/v1/auth/email")
 - [ ] try to cut down nonrequired headers (clean up)
 - [ ] limit api chirp requests only to scooters within 0.5 miles of user.
