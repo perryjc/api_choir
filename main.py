@@ -94,11 +94,14 @@ def check_connection(url):
 def verify_headers(url, headers):
     print("Verifying headers...")
     response = requests.get(url, headers=headers, timeout=5)
-    if response.status_code == 200:
-        print("Headers are valid")
-    else:
-        print("Header verification failed with status code:", response.status_code)
+    server_responce = response.json()
+    if "code" in server_responce:
+        responce_code = server_responce["code"]
+        print("Header verification failed with status code:", responce_code)
+        print("Is auth token valid?")
         sys.exit()
+    else:
+        print("Headers are valid")
 
 base_url = "https://api-bird.prod.birdapp.com"
 nearby_url = base_url + "/bird/nearby-by-cells"

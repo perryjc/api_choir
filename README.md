@@ -11,7 +11,7 @@
 - [ ] split diffrent steps of the script into seprate files
 - [ ] color "success" and "failure" messages
 - [ ] the bird app does a POST to `/user/session-start` every time the app is open, implement this (header check)
-- [ ] make `verify_headers` parse responce insted of just checking if server responds
+- [x] make `verify_headers` parse responce insted of just checking if server responds
 - [ ] add script breakdown/walkthrough
 - [ ] talk about apk mods that enable chucker among other things
 - [ ] make output ... (i forgot)
