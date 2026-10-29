@@ -80,11 +80,11 @@ nearby_payload = {
         # NEED TO ADD A CALL THAT FINDS CELL IDS FROM USER LAT/LON
         # POST to /nest/parking-nests-by-cell with i think this payload
         # or just added manually (witch is what i did. but will fail if its supposed dynamic)
+        # It looks like something breaks when i add more then 3 "cell_ids" so...
+        # no clue, still broken
         "-8523145651523944448",
         "-8523145514084990976",
-        "-8523142902744875008",
-        "-8523142851205267456",
-        "-8523142885565005824"
+        "-8523142902744875008"
     ]
 }
 
@@ -152,7 +152,9 @@ for scooter_id, info in sorted_scooters.items():
     }
     chirp_response = requests.put(chirp_url, headers=headers, json=chirp_payload)
     chirp_data = chirp_response.json()
-    if(not chirp_data["down"]):
-        print("Success")
+    scooter_code = info["code"]
+    
+    if not chirp_data["down"]:
+        print(f"Success: {scooter_code}")
     else:
-        print("Failed")
+        print(f"Failed: {scooter_code}")
