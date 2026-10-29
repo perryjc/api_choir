@@ -16,6 +16,7 @@ else:
     latitude = input("Enter latitude (or hit `enter` to use default): ") or 38.8820057
     longitude = input("Enter longitude (or hit `enter` to use default): ") or -77.1115141
 
+# default cords are for Ballston MU metro station
 
 user_coords = (latitude, longitude)
 
@@ -75,8 +76,11 @@ nearby_payload = {
         "source": ""
     },
     "cell_ids": [
+        # NEED TO ADD A CALL THAT FINDS CELL IDS FROM USER LAT/LON
+        # POST to /nest/parking-nests-by-cell with i think this payload
         "-8523145651523944448",
-        "-8523145514084990976"
+        "-8523145514084990976",
+        "-8523142902744875008"
     ]
 }
 
@@ -123,18 +127,18 @@ for bird in nearby_data["birds"]:
     
     # Calculate the distance between the user and the bird
     scooter_coords = (scooter_lat, scooter_lng)
-    distance = geodesic(user_coords, scooter_coords).feet
+    distance = geodesic(user_coords, scooter_coords).miles
     
     scooters[scooter_id] = {
         "code": bird["code"],
         "scooter_lat": scooter_lat,
         "scooter_lng": scooter_lng,
-        "distance_feet": round(distance, 4)
+        "distance_miles": round(distance, 3)
     }
 
 # sorts the dictionary based on how far from the user the scooters are.
 sorted_scooters = dict(
-    sorted(scooters.items(), key=lambda item: item[1]["distance_feet"])
+    sorted(scooters.items(), key=lambda item: item[1]["distance_miles"])
 )
 
 for scooter_id, info in sorted_scooters.items():
