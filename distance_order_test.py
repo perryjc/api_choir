@@ -3,18 +3,23 @@ import json
 import sys
 import geopy
 from geopy.geocoders import Nominatim
+from geopy.distance import geodesic
 
-address = input("Enter a zip code In the US or address (or 'enter' to input lat/lon manually): ")
-if address:
-    geolocator = Nominatim(user_agent="bird_api_choir")
-    location = geolocator.geocode(address + ", USA")
-    latitude = location.latitude
-    longitude = location.longitude
-else:
-    latitude = input("Enter latitude (or hit `enter` to use default): ") or 38.8845454
-    longitude = input("Enter longitude (or hit `enter` to use default): ") or -77.122171
+#address = input("Enter a zip code In the US or address (or 'enter' to input lat/lon manually): ")
+
+# test address
+address = "4230 Fairfax Dr, Arlington, VA"
+
+geolocator = Nominatim(user_agent="bird_api_choir")
+location = geolocator.geocode(address + ", USA")
+latitude = location.latitude
+longitude = location.longitude
+
+# ADDED: make a tuple of user cords for the geodesic function to work better
+user_coords = (latitude, longitude)
 
 print("target cords: ",latitude, longitude)
+
 
 location_data = {
     "latitude": latitude,
@@ -80,14 +85,38 @@ nearby_data = response.json()
 scooters = {}
 
 # for loop that creates a dictionary of scooters with their id as the key and model and battery level as values
+
+# for bird in nearby_data["birds"]:
+#     scooter_id = bird["id"]
+#     scooters[scooter_id] = {
+#         # gets the 3 diget code of each scooter
+#         "code": bird["code"],
+#         # gets the lat and long of each scooter (that are in a nested dictionary within the api response)
+#         "scooter_lat": bird["location"]["latitude"],
+#         "scooter_lng": bird["location"]["longitude"]
+#     }
+
+# now we have a dictionary of scooters in random order
+
 for bird in nearby_data["birds"]:
     scooter_id = bird["id"]
+    scooter_lat = bird["location"]["latitude"]
+    scooter_lng = bird["location"]["longitude"]
+    
+    # Calculate the distance between the user and the bird
+    scooter_coords = (scooter_lat, scooter_lng)
+    distance = geodesic(user_coords, scooter_coords).feet
+    
     scooters[scooter_id] = {
-        # gets the 3 diget code of each scooter
         "code": bird["code"],
-        # gets the lat and long of each scooter (that are in a nested dictionary within the api response)
-        "scooter_lat": bird["location"]["latitude"],
-        "scooter_lng": bird["location"]["longitude"]
+        "scooter_lat": scooter_lat,
+        "scooter_lng": scooter_lng,
+        "distance_feet": round(distance, 4)
     }
 
-print(json.dumps(scooters, indent=4))
+# sorts the dictionary based on how far from the user the scooters are.
+sorted_scooters = dict(
+    sorted(scooters.items(), key=lambda item: item[1]["distance_feet"])
+)
+
+print(json.dumps(sorted_scooters, indent=4))
