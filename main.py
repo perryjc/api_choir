@@ -3,6 +3,7 @@ import json
 import sys
 import geopy
 from geopy.geocoders import Nominatim
+from geopy.distance import geodesic
 
 # TODO:
 # allow user spesify lat/lon
@@ -17,6 +18,8 @@ if address:
 else:
     latitude = input("Enter latitude (or hit `enter` to use default): ") or 38.8845454
     longitude = input("Enter longitude (or hit `enter` to use default): ") or -77.122171
+
+user_coords = (latitude, longitude)
 
 print("target cords: ",latitude, longitude)
 
@@ -110,12 +113,33 @@ response = requests.post(nearby_url, headers=headers, json=nearby_payload)
 
 nearby_data = response.json()
 
-bird_ids = [bird["id"] for bird in nearby_data["birds"]]
+scooters = {}
+# replaces: bird_ids = [bird["id"] for bird in nearby_data["birds"]]
+for bird in nearby_data["birds"]:
+    scooter_id = bird["id"]
+    scooter_lat = bird["location"]["latitude"]
+    scooter_lng = bird["location"]["longitude"]
+    
+    # Calculate the distance between the user and the bird
+    scooter_coords = (scooter_lat, scooter_lng)
+    distance = geodesic(user_coords, scooter_coords).feet
+    
+    scooters[scooter_id] = {
+        "code": bird["code"],
+        "scooter_lat": scooter_lat,
+        "scooter_lng": scooter_lng,
+        "distance_feet": round(distance, 4)
+    }
 
-for x in range(len(bird_ids)):
+# sorts the dictionary based on how far from the user the scooters are.
+sorted_scooters = dict(
+    sorted(scooters.items(), key=lambda item: item[1]["distance_feet"])
+)
+
+for scooter_id, info in sorted_scooters.items():
     chirp_payload = {
         "alarm": alarm,
-        "bird_id": bird_ids[x]
+        "bird_id": scooter_id
     }
     chirp_response = requests.put(chirp_url, headers=headers, json=chirp_payload)
     chirp_data = chirp_response.json()
