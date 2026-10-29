@@ -5,9 +5,6 @@ import geopy
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
 
-# TODO:
-# allow user spesify lat/lon
-# integrate cordintate module (to get user location)
 
 address = input("Enter a zip code In the US or address (or 'enter' to input lat/lon manually): ")
 if address:
@@ -16,8 +13,9 @@ if address:
     latitude = location.latitude
     longitude = location.longitude
 else:
-    latitude = input("Enter latitude (or hit `enter` to use default): ") or 38.8845454
-    longitude = input("Enter longitude (or hit `enter` to use default): ") or -77.122171
+    latitude = input("Enter latitude (or hit `enter` to use default): ") or 38.8820057
+    longitude = input("Enter longitude (or hit `enter` to use default): ") or -77.1115141
+
 
 user_coords = (latitude, longitude)
 
