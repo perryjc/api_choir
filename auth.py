@@ -75,4 +75,17 @@ auth_token_raw = auth_token_response.json()
 
 AUTH_TOKEN = auth_token_raw["access"]
 
-print("Auth token: ", AUTH_TOKEN)
+# write to authfile
+authfile_dict = {}
+
+authfile_dict["timestamp"] = timestamp
+authfile_dict["email"] = email
+authfile_dict["auth_token"] = "Bearer " + AUTH_TOKEN
+
+newfile = open("auth_info_file.txt", "a")
+
+# writes to file as a json object for easy parsing
+with open("auth_info_file.txt", "w") as authfile:
+    authfile.write(json.dumps(authfile_dict))
+
+print("Auth token generated successfully. try running main.py now.")

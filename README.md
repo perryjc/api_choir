@@ -34,17 +34,17 @@
     - [ ] otherwise check if "auth timestamp" is more then 24 hours old (end script if it is)
     - [ ] put "auth token" into a veriable
     - [ ] run script normally
-- [ ] add "auth.py" script that creates an auth token from users email
-    - [ ] prompt user for email 
-    - [ ] send POST to /api/v1/auth/email (with email as payload)
-    - [ ] if returns `"validation_required": true` tell user to check email
-    - [ ] prompt user to copy "magic link token" from email
-    - [ ] send POST to /api/v1/auth/magic-link/use (with email and magic token as payload)
-    - [ ] api will return "access" and "refresh" tokens, place "access" into a veriable
-    - [ ] create a object with: auth timestamp, and auth token
-    - [ ] create "auth_info_file.txt" (placeholder name) and remove old ones if they exist
-    - [ ] write auth object to file and save
-    - [ ] prompt user to try main script again
+- [x] add "auth.py" script that creates an auth token from users email
+    - [x] prompt user for email 
+    - [x] send POST to /api/v1/auth/email (with email as payload)
+    - [x] if returns `"validation_required": true` tell user to check email
+    - [x] prompt user to copy "magic link token" from email
+    - [x] send POST to /api/v1/auth/magic-link/use (with email and magic token as payload)
+    - [x] api will return "access" and "refresh" tokens, place "access" into a veriable
+    - [x] create a object with: auth timestamp, and auth token
+    - [x] create "auth_info_file.txt" (placeholder name) and remove old ones if they exist
+    - [x] write auth object to file and save
+    - [x] prompt user to try main script again
 
 
 
