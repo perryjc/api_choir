@@ -10,6 +10,7 @@
 - [x] cell_ids is dynamic, have script make an enpoint request to get cell_ids
 - [ ] identify responce codes (check for ratelimit or invalid prams)
 - [ ] add more debug logs
+- [ ] add utils.py file with helper functions
 - [ ] add ascii art when script is ran
 - [ ] display options user selected and then ask "do you want to continue?"
 - [ ] split diffrent steps of the script into seprate files
@@ -20,12 +21,32 @@
 - [ ] talk about apk mods that enable chucker among other things
 - [ ] make output ... (i forgot)
 - [x] make output show the 5 character code of each chirped scooter
-- [ ] add function that takes user email and makes auth token, insted of mine (POST to "/api/v1/auth/email")
 - [ ] try to cut down nonrequired headers (clean up)
 - [ ] limit api chirp requests only to scooters within 0.5 miles of user.
 - [ ] talk about how bird has the issue of allowing users to chirp scooters from anywhere
 - [ ] integrate other scooter brands (lime, hop, ect)
 - [ ] integrate esp32 tracker/opensorce airtag (to get dynamic user location)
+
+- [ ] add function that takes user email and makes auth token, insted of mine (POST to "/api/v1/auth/email")
+    - [ ] check if theres an existing auth token file. 
+    - [ ] if there isnt, prompt user to use "auth.py" and exit script
+    - [ ] open and read the auth file/turn it into a list
+    - [ ] otherwise check if "auth timestamp" is more then 24 hours old (end script if it is)
+    - [ ] put "auth token" into a veriable
+    - [ ] run script normally
+- [ ] add "auth.py" script that creates an auth token from users email
+    - [ ] prompt user for email 
+    - [ ] send POST to /api/v1/auth/email (with email as payload)
+    - [ ] if returns `"validation_required": true` tell user to check email
+    - [ ] prompt user to copy "magic link token" from email
+    - [ ] send POST to /api/v1/auth/magic-link/use (with email and magic token as payload)
+    - [ ] api will return "access" and "refresh" tokens, place "access" into a veriable
+    - [ ] create a object with: auth timestamp, and auth token
+    - [ ] create "auth_info_file.txt" (placeholder name) and remove old ones if they exist
+    - [ ] write auth object to file and save
+    - [ ] prompt user to try main script again
+
+
 
 ## Required librarys
 - geopy
