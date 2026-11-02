@@ -1,5 +1,6 @@
 import requests
 import json
+import datetime
 import sys
 import os
 import geopy
@@ -10,14 +11,21 @@ from geopy.distance import geodesic
 latitude = 38.8820057
 longitude = -77.1115141
 
+ct = datetime.datetime.now()
+timestamp = ct.strftime("%Y-%m-%d")
+
 if os.path.isfile("auth_info_file.txt"):
     with open("auth_info_file.txt") as auth_file:
         auth_info = json.load(auth_file)
         email = auth_info["email"]
-        timestamp = auth_info["timestamp"]
+        auth_timestamp = auth_info["timestamp"]
         AUTH_TOKEN = auth_info["auth_token"]
 else:
     print("Auth file not found. run `auth.py` to verify your email and get a auth token")
+    sys.exit()
+
+if auth_timestamp != timestamp:
+    print("Auth token is expired. re-run `auth.py`")
     sys.exit()
 
 location_data = {
@@ -58,4 +66,4 @@ headers = {
     "Authorization": AUTH_TOKEN
 }
 
-print(headers)
+print(timestamp)

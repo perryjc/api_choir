@@ -27,13 +27,13 @@
 - [ ] integrate other scooter brands (lime, hop, ect)
 - [ ] integrate esp32 tracker/opensorce airtag (to get dynamic user location)
 
-- [ ] add function that takes user email and makes auth token, insted of mine (POST to "/api/v1/auth/email")
-    - [ ] check if theres an existing auth token file. 
-    - [ ] if there isnt, prompt user to use "auth.py" and exit script
-    - [ ] open and read the auth file/turn it into a list
-    - [ ] otherwise check if "auth timestamp" is more then 24 hours old (end script if it is)
-    - [ ] put "auth token" into a veriable
-    - [ ] run script normally
+- [x] add function that takes user email and makes auth token, insted of mine (POST to "/api/v1/auth/email")
+    - [x] check if theres an existing auth token file. 
+    - [x] if there isnt, prompt user to use "auth.py" and exit script
+    - [x] open and assign values to veribles 
+    - [x] otherwise check if "auth timestamp" is more then 24 hours old (end script if it is)
+    - [x] put "auth token" into a veriable
+    - [x] run script normally
 - [x] add "auth.py" script that creates an auth token from users email
     - [x] prompt user for email 
     - [x] send POST to /api/v1/auth/email (with email as payload)
