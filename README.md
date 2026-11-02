@@ -7,6 +7,7 @@
 - [x] order scooters by how close they are to the user (i.e: chirp the closest scooter first) ***
 - [x] ignore every scooter with "battery_level": 0 (i have no clue but nearby_data has no dead ones)
 - [ ] make output look more pretty when interupted
+- [x] cell_ids is dynamic, have script make an enpoint request to get cell_ids
 - [ ] identify responce codes (check for ratelimit or invalid prams)
 - [ ] add more debug logs
 - [ ] add ascii art when script is ran

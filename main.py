@@ -5,6 +5,11 @@ import geopy
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
 
+base_url = "https://api-bird.prod.birdapp.com"
+cells_url = base_url + "/map/rider-cells" # added
+nearby_url = base_url + "/bird/nearby-by-cells"
+chirp_url = base_url + "/bird/chirp"
+user_url = base_url + "/user"
 
 address = input("Enter a zip code In the US or address (or 'enter' to input lat/lon manually): ")
 if address:
@@ -30,6 +35,51 @@ else:
     alarm = True
     print("alarm enabled")
 
+# first payload used to get the cell ids list from the endpoint: /map/rider-cells
+get_cell_ids_payload = {
+  "geometries": {
+    "55353538521136": { #this might be a problom if its also dynamic like the cell ids. monitoring
+      "rect": {
+        "hi": {
+          "accuracy": None,
+          "altitude": None,
+          "heading": None,
+          # orignally:
+          # "latitude": 38.88999999999999
+          # "longitude": -77.11
+          # round latitude to 38.88 (actual, to the nearest 2 decimal places)
+          # round longitude to -77.11 (actual, to the nearest 2 decimal places, minus 0.01)
+          "latitude": round(latitude, 5),
+          "longitude": round(longitude, 2),
+          "mocked": False,
+          "source": "gps",
+          "speed": None,
+          "timestamp": "2026-11-02T07:25:49.594-05:00"
+        },
+        "lo": {
+          "accuracy": None,
+          "altitude": None,
+          "heading": None,
+          # orignally:
+          # "latitude": 38.879999999999995
+          # "longitude": -77.12
+          # round latitude to 38.87 (actual, to the nearest 2 decimal places, minus 0.01)
+          # round longitude to -77.12 (actual, to the nearest 2 decimal places)
+          "latitude": round(latitude, 2) - 0.01,
+          "longitude": round(longitude, 2) - 0.01,
+          "mocked": False,
+          "source": "gps",
+          "speed": None,
+          "timestamp": "2026-11-02T07:25:49.594-05:00"
+        }
+      }
+    }
+  },
+  "types": [
+    "bird"
+  ]
+}
+
 location_data = {
     "latitude": latitude,
     "longitude": longitude,
@@ -41,19 +91,6 @@ location_data = {
     "timestamp": "2026-10-26T18:27:53.352-04:00",
     "source": "gps"
 }
-
-# NEED TO ADD A CALL THAT FINDS CELL IDS FROM USER LAT/LON
-# POST to /map/rider-cells (i think, see chucker_exports/map_ridercells.txt) 
-# or just added manually (witch is what i did. but will fail if its supposed dynamic)
-# It looks like something breaks when i add more then 3 "cell_ids" so...
-# no clue, still broken
-
-payload_cell_ids = [
-    # these are placeholder values for now
-    "-8523145651523944448", 
-    "-8523145514084990976",
-    "-8523142902744875008"
-]
 
 # Headers are the same (Almost) everywhere
 headers = {
@@ -80,6 +117,12 @@ headers = {
     "Role": "operator",
     "Authorization": "Bearer eyJhbGciOiJSUzUxMiJ9.eyJqdGkiOiIzODhhYzkwOS04MDRmLTQ4MWYtYmVjZi1hNWNkYjhhOWRlNTYiLCJzdWIiOiI1ZjM4OWI4Mi0yOTE0LTQ4MmItOTdhOC03MzI4NGM1ODczOGUiLCJuYmYiOjE3OTM2MjIzNDksImV4cCI6MTc5MzcwODc0OSwiYXVkIjoiYmlyZC5zZXJ2aWNlcyIsImlzcyI6ImJpcmQuYXV0aCIsImlhdCI6MTc5MzYyMjM0OSwicm9sZXMiOlsiVVNFUiJdLCJhcHAiOiI3YjhlZDk1NS02ZTNhLTRlZWMtYmEyMC04OGFmOWQ3YWVhNzYiLCJ2ZXIiOiIwLjAuMiJ9.IwdP6NGfXQ4zK1iVXQn7WIq_n0LRdvbIIBP5F-bhQqO52HAnaOtDhsXNYv-esM05VzehT3wkJoBKTq7H7NdZkz3wkkH_-vLUcUfBhcSdPRrWj1taQcSk8zElv3Upb_bcX6ABf-CaiTFs4K9zPu2uvCodyvbh3asFU1SK0AT17FpdRuP-GG_Gzv4jDsALj56guos8v568erjsF-E5A0yzIaDf2IrPpqQoThFupc2Ay7tbdvJf149rGYIKaFiHOoBoN3WbUt8Cvh4mskCu2kJUREaVa_A9GsVRRXcF__oVC06dEIUPStWBCQD0vpP71hff9iVHhaX6lQGE34ytfAbyGwk8mGipJlSNMsx3bPaj7zs5Onatjh2uLvd7JcIss7S4kG3cdJHcvRtGqOR1yHRSWDe412UFtGK1ScD5qC-JVQjm3pXbVwvAkxncF4dU-yAynua-yfwp0eXzKrWATf93VPjr_i0GxpkFxJ3ig5MrqQNNEpVH5JC736J7iAg1Jh4kgiFM0okvuiT7j8thJ6nyXnIQ8EnrqYuB6DZXu8qwv9AOcMxgDAr8LbGLh0W8ZaUdKa0lsqQdfG9FzA_CSjMLoj4R3YpvNvtidS3l6QbVrQY4rNFyYer-IJzwyAHt723SuEIF2SrgWJ_wRqtJYPnplwlLCCJ3B76ROONl6QH0Bvo"
 }
+
+# get cell ids from the /map/rider-cells endpoint (see dynamic_cellids_test.py for more details)
+cell_response = requests.post(cells_url, headers=headers, json=get_cell_ids_payload)
+cell_data = cell_response.json()
+first_cell = next(iter(cell_data["cells"].values()))
+payload_cell_ids = first_cell["birds"]["cell_ids"]
 
 nearby_payload = {
     "map_center": {
@@ -112,11 +155,6 @@ def verify_headers(url, headers):
         sys.exit()
     else:
         print("Headers are valid")
-
-base_url = "https://api-bird.prod.birdapp.com"
-nearby_url = base_url + "/bird/nearby-by-cells"
-chirp_url = base_url + "/bird/chirp"
-user_url = base_url + "/user"
 
 check_connection("https://bird.co/")
 verify_headers(user_url, headers)
