@@ -1,5 +1,7 @@
 import requests
 import json
+import datetime
+import os
 import sys
 import geopy
 from geopy.geocoders import Nominatim
@@ -10,6 +12,25 @@ cells_url = base_url + "/map/rider-cells" # added
 nearby_url = base_url + "/bird/nearby-by-cells"
 chirp_url = base_url + "/bird/chirp"
 user_url = base_url + "/user"
+
+ct = datetime.datetime.now()
+timestamp = ct.strftime("%Y-%m-%d")
+
+if os.path.isfile("auth_info_file.txt"):
+    with open("auth_info_file.txt") as auth_file:
+        auth_info = json.load(auth_file)
+        email = auth_info["email"]
+        auth_timestamp = auth_info["timestamp"]
+        AUTH_TOKEN = auth_info["auth_token"]
+else:
+    print("Auth file not found. run `auth.py` to verify your email and get a auth token")
+    sys.exit()
+
+if auth_timestamp != timestamp:
+    print("Auth token is expired. re-run `auth.py`")
+    sys.exit()
+
+print("email: ", email)
 
 address = input("Enter a zip code In the US or address (or 'enter' to input lat/lon manually): ")
 if address:
@@ -115,7 +136,7 @@ headers = {
     "App-Name": "bird",
     "App-Type": "operator",
     "Role": "operator",
-    "Authorization": "Bearer eyJhbGciOiJSUzUxMiJ9.eyJqdGkiOiIzODhhYzkwOS04MDRmLTQ4MWYtYmVjZi1hNWNkYjhhOWRlNTYiLCJzdWIiOiI1ZjM4OWI4Mi0yOTE0LTQ4MmItOTdhOC03MzI4NGM1ODczOGUiLCJuYmYiOjE3OTM2MjIzNDksImV4cCI6MTc5MzcwODc0OSwiYXVkIjoiYmlyZC5zZXJ2aWNlcyIsImlzcyI6ImJpcmQuYXV0aCIsImlhdCI6MTc5MzYyMjM0OSwicm9sZXMiOlsiVVNFUiJdLCJhcHAiOiI3YjhlZDk1NS02ZTNhLTRlZWMtYmEyMC04OGFmOWQ3YWVhNzYiLCJ2ZXIiOiIwLjAuMiJ9.IwdP6NGfXQ4zK1iVXQn7WIq_n0LRdvbIIBP5F-bhQqO52HAnaOtDhsXNYv-esM05VzehT3wkJoBKTq7H7NdZkz3wkkH_-vLUcUfBhcSdPRrWj1taQcSk8zElv3Upb_bcX6ABf-CaiTFs4K9zPu2uvCodyvbh3asFU1SK0AT17FpdRuP-GG_Gzv4jDsALj56guos8v568erjsF-E5A0yzIaDf2IrPpqQoThFupc2Ay7tbdvJf149rGYIKaFiHOoBoN3WbUt8Cvh4mskCu2kJUREaVa_A9GsVRRXcF__oVC06dEIUPStWBCQD0vpP71hff9iVHhaX6lQGE34ytfAbyGwk8mGipJlSNMsx3bPaj7zs5Onatjh2uLvd7JcIss7S4kG3cdJHcvRtGqOR1yHRSWDe412UFtGK1ScD5qC-JVQjm3pXbVwvAkxncF4dU-yAynua-yfwp0eXzKrWATf93VPjr_i0GxpkFxJ3ig5MrqQNNEpVH5JC736J7iAg1Jh4kgiFM0okvuiT7j8thJ6nyXnIQ8EnrqYuB6DZXu8qwv9AOcMxgDAr8LbGLh0W8ZaUdKa0lsqQdfG9FzA_CSjMLoj4R3YpvNvtidS3l6QbVrQY4rNFyYer-IJzwyAHt723SuEIF2SrgWJ_wRqtJYPnplwlLCCJ3B76ROONl6QH0Bvo"
+    "Authorization": AUTH_TOKEN
 }
 
 # get cell ids from the /map/rider-cells endpoint (see dynamic_cellids_test.py for more details)
