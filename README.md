@@ -46,7 +46,9 @@
     - [x] write auth object to file and save
     - [x] prompt user to try main script again
 
+## POC Video:
 
+[![POC Video](https://img.youtube.com/vi/Tuyi8vloYf4/0.jpg)](https://youtube.com/shorts/Tuyi8vloYf4)
 
 ## Required librarys
 - geopy
