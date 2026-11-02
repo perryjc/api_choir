@@ -42,6 +42,19 @@ location_data = {
     "source": "gps"
 }
 
+# NEED TO ADD A CALL THAT FINDS CELL IDS FROM USER LAT/LON
+# POST to /map/rider-cells (i think, see chucker_exports/map_ridercells.txt) 
+# or just added manually (witch is what i did. but will fail if its supposed dynamic)
+# It looks like something breaks when i add more then 3 "cell_ids" so...
+# no clue, still broken
+
+payload_cell_ids = [
+    # these are placeholder values for now
+    "-8523145651523944448", 
+    "-8523145514084990976",
+    "-8523142902744875008"
+]
+
 # Headers are the same (Almost) everywhere
 headers = {
     "App-Version": "4.417.1.3",
@@ -76,16 +89,7 @@ nearby_payload = {
         "timestamp": "1969-12-31T19:00:00.000-05:00",
         "source": ""
     },
-    "cell_ids": [
-        # NEED TO ADD A CALL THAT FINDS CELL IDS FROM USER LAT/LON
-        # POST to /map/rider-cells (i think, see chucker_exports/map_ridercells.txt) 
-        # or just added manually (witch is what i did. but will fail if its supposed dynamic)
-        # It looks like something breaks when i add more then 3 "cell_ids" so...
-        # no clue, still broken
-        "-8523145651523944448",
-        "-8523145514084990976",
-        "-8523142902744875008"
-    ]
+    "cell_ids": payload_cell_ids
 }
 
 def check_connection(url):
