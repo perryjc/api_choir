@@ -1,0 +1,100 @@
+URL: https://api-bird.prod.birdapp.com/map/rider-cells
+Method: POST
+Protocol: h2
+Status: Complete
+Response: 200 
+SSL: Yes
+
+Request time: Mon Nov 02 07:25:49 EST 2026
+Response time: Mon Nov 02 07:25:49 EST 2026
+Duration: 167 ms
+
+Request size: 440 B
+Response size: 169 B
+Total size: 609 B
+
+---------- Request ----------
+
+App-Version: 4.417.1.3
+Accept-Language: en-US,en
+Bird-Device-Id: 038abc5740cbcf96
+Battery-Level: 100
+Bluetooth-State: enabled
+Carrier-Name: Google Fi
+Client-Time: 2026-11-02T07:25:49.575-05:00
+Connection-Type: unknown
+Device-Model: Pixel 10a
+Device-Name: stallion
+Device-Region: US
+Device-Language: en-US
+Device-Id: 038abc5740cbcf96
+Location: {"accuracy":20.503999710083008,"altitude":47.52486083496494,"heading":null,"latitude":38.8812564,"longitude":-77.1105047,"mocked":false,"source":"gps","speed":null,"timestamp":"2026-11-02T07:25:46.659-05:00"}
+Mobile-Network-Generation: unknown
+OS-Version: 16
+Platform: android
+User-Agent: Bird/4.417.1.3 (co.bird.android; release; Android - 16)
+App-Name: bird
+App-Type: operator
+Role: operator
+Authorization: Bearer eyJhbGciOiJSUzUxMiJ9.eyJqdGkiOiIzODhhYzkwOS04MDRmLTQ4MWYtYmVjZi1hNWNkYjhhOWRlNTYiLCJzdWIiOiI1ZjM4OWI4Mi0yOTE0LTQ4MmItOTdhOC03MzI4NGM1ODczOGUiLCJuYmYiOjE3OTM2MjIzNDksImV4cCI6MTc5MzcwODc0OSwiYXVkIjoiYmlyZC5zZXJ2aWNlcyIsImlzcyI6ImJpcmQuYXV0aCIsImlhdCI6MTc5MzYyMjM0OSwicm9sZXMiOlsiVVNFUiJdLCJhcHAiOiI3YjhlZDk1NS02ZTNhLTRlZWMtYmEyMC04OGFmOWQ3YWVhNzYiLCJ2ZXIiOiIwLjAuMiJ9.IwdP6NGfXQ4zK1iVXQn7WIq_n0LRdvbIIBP5F-bhQqO52HAnaOtDhsXNYv-esM05VzehT3wkJoBKTq7H7NdZkz3wkkH_-vLUcUfBhcSdPRrWj1taQcSk8zElv3Upb_bcX6ABf-CaiTFs4K9zPu2uvCodyvbh3asFU1SK0AT17FpdRuP-GG_Gzv4jDsALj56guos8v568erjsF-E5A0yzIaDf2IrPpqQoThFupc2Ay7tbdvJf149rGYIKaFiHOoBoN3WbUt8Cvh4mskCu2kJUREaVa_A9GsVRRXcF__oVC06dEIUPStWBCQD0vpP71hff9iVHhaX6lQGE34ytfAbyGwk8mGipJlSNMsx3bPaj7zs5Onatjh2uLvd7JcIss7S4kG3cdJHcvRtGqOR1yHRSWDe412UFtGK1ScD5qC-JVQjm3pXbVwvAkxncF4dU-yAynua-yfwp0eXzKrWATf93VPjr_i0GxpkFxJ3ig5MrqQNNEpVH5JC736J7iAg1Jh4kgiFM0okvuiT7j8thJ6nyXnIQ8EnrqYuB6DZXu8qwv9AOcMxgDAr8LbGLh0W8ZaUdKa0lsqQdfG9FzA_CSjMLoj4R3YpvNvtidS3l6QbVrQY4rNFyYer-IJzwyAHt723SuEIF2SrgWJ_wRqtJYPnplwlLCCJ3B76ROONl6QH0Bvo
+
+{
+  "geometries": {
+    "55353538521136": {
+      "rect": {
+        "hi": {
+          "accuracy": null,
+          "altitude": null,
+          "heading": null,
+          "latitude": 38.88999999999999,
+          "longitude": -77.11,
+          "mocked": false,
+          "source": "gps",
+          "speed": null,
+          "timestamp": "2026-11-02T07:25:49.594-05:00"
+        },
+        "lo": {
+          "accuracy": null,
+          "altitude": null,
+          "heading": null,
+          "latitude": 38.879999999999995,
+          "longitude": -77.12,
+          "mocked": false,
+          "source": "gps",
+          "speed": null,
+          "timestamp": "2026-11-02T07:25:49.594-05:00"
+        }
+      }
+    }
+  },
+  "types": [
+    "nest"
+  ]
+}
+
+---------- Response ----------
+
+content-type: application/json
+content-length: 169
+date: Mon, 02 Nov 2026 12:25:50 GMT
+strict-transport-security: max-age=15724800; includeSubDomains
+x-cache: Miss from cloudfront
+via: 1.1 0a207be11cfd2d90fff9212d2a692a7e.cloudfront.net (CloudFront)
+x-amz-cf-pop: IAD61-P9
+x-amz-cf-id: qO1qqmCeYBHqEuY1tynScCXQo0_d_wJwDJOxxA1eerjgkus8mxHdHw==
+
+{
+  "cells": {
+    "55353538521136": {
+      "nests": {
+        "cell_ids": [
+          "-8523145703063552000",
+          "-8523145668703813632",
+          "-8523145634344075264",
+          "-8523145599984336896"
+        ],
+        "strategy": "s2-cell-13"
+      }
+    }
+  }
+}

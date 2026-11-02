@@ -65,7 +65,7 @@ headers = {
     "App-Name": "bird",
     "App-Type": "operator",
     "Role": "operator",
-    "Authorization": "Bearer eyJhbGciOiJSUzUxMiJ9.eyJqdGkiOiJjNmRlNTY2Mi0wMDMwLTQ4NTQtOGYzZi1iNzIzYjViMzE3NTgiLCJzdWIiOiI1ZjM4OWI4Mi0yOTE0LTQ4MmItOTdhOC03MzI4NGM1ODczOGUiLCJuYmYiOjE3OTM0NTUzNjgsImV4cCI6MTc5MzU0MTc2OCwiYXVkIjoiYmlyZC5zZXJ2aWNlcyIsImlzcyI6ImJpcmQuYXV0aCIsImlhdCI6MTc5MzQ1NTM2OCwicm9sZXMiOlsiVVNFUiJdLCJhcHAiOiI3YjhlZDk1NS02ZTNhLTRlZWMtYmEyMC04OGFmOWQ3YWVhNzYiLCJ2ZXIiOiIwLjAuMiJ9.b4yDzAz9hiNbLNwDCaLdOqT1HdmmPKXL1miwZ-pqUfTW4vDehJYfZvSwC24Ldxk8vzl9Wa4PDIqhdDbsBLdqp7CzBoJ4AoGZMVcRzlU8gLa_djvtJsGQV1AVtQiqol1fG1NNqkku1SSL1__VuTmkIRAN4uCDa9FvvISRoTmeq20mwQzBJNBkrB94jgHdQzus68X2SenzfzlnxhHdL4fxiXPB26Gj9usne1m-zexmc2b6U0fvhgG71-ScCDTKRWFFRo6Wj0SNG1zGaBGovq4MmmjS7uztgVMQhMGhYXAfZCCC6OVPy8NP0hXeF30fjSpxK7lSLQ6rTlxdBoTmCRfZYCn3R7TF7xQeR5j4_C-TPT0PyGqp6HillHDtuPARezC_zGrg0v4bnT9qczWD9QVyD_nBc3q6EEuAZvX0CeEKQrnWZR9anLF-8cKibVadlfS4qrr5WIgCv1u1LpCsWHYjUBsy8X07tnIdMZunpkl_8b_NtJ_azKr3u9vGSkbSxYNp26tXGN-MrslypZmorBtChq7-y0-aY0J5CcQsv_RXCQqLEPIM42F83X0W3iWp48N4hN6WONXW-yg56AumRAhgyll8Yg-Omo7ZqHUUDkVcYY5e85K9hzMnu_H2iYcLrpg_Bg1bCyQGgfL4QZn7P3tNsaJNApg4ULDFaUfyNgMMGAU"
+    "Authorization": "Bearer eyJhbGciOiJSUzUxMiJ9.eyJqdGkiOiIzODhhYzkwOS04MDRmLTQ4MWYtYmVjZi1hNWNkYjhhOWRlNTYiLCJzdWIiOiI1ZjM4OWI4Mi0yOTE0LTQ4MmItOTdhOC03MzI4NGM1ODczOGUiLCJuYmYiOjE3OTM2MjIzNDksImV4cCI6MTc5MzcwODc0OSwiYXVkIjoiYmlyZC5zZXJ2aWNlcyIsImlzcyI6ImJpcmQuYXV0aCIsImlhdCI6MTc5MzYyMjM0OSwicm9sZXMiOlsiVVNFUiJdLCJhcHAiOiI3YjhlZDk1NS02ZTNhLTRlZWMtYmEyMC04OGFmOWQ3YWVhNzYiLCJ2ZXIiOiIwLjAuMiJ9.IwdP6NGfXQ4zK1iVXQn7WIq_n0LRdvbIIBP5F-bhQqO52HAnaOtDhsXNYv-esM05VzehT3wkJoBKTq7H7NdZkz3wkkH_-vLUcUfBhcSdPRrWj1taQcSk8zElv3Upb_bcX6ABf-CaiTFs4K9zPu2uvCodyvbh3asFU1SK0AT17FpdRuP-GG_Gzv4jDsALj56guos8v568erjsF-E5A0yzIaDf2IrPpqQoThFupc2Ay7tbdvJf149rGYIKaFiHOoBoN3WbUt8Cvh4mskCu2kJUREaVa_A9GsVRRXcF__oVC06dEIUPStWBCQD0vpP71hff9iVHhaX6lQGE34ytfAbyGwk8mGipJlSNMsx3bPaj7zs5Onatjh2uLvd7JcIss7S4kG3cdJHcvRtGqOR1yHRSWDe412UFtGK1ScD5qC-JVQjm3pXbVwvAkxncF4dU-yAynua-yfwp0eXzKrWATf93VPjr_i0GxpkFxJ3ig5MrqQNNEpVH5JC736J7iAg1Jh4kgiFM0okvuiT7j8thJ6nyXnIQ8EnrqYuB6DZXu8qwv9AOcMxgDAr8LbGLh0W8ZaUdKa0lsqQdfG9FzA_CSjMLoj4R3YpvNvtidS3l6QbVrQY4rNFyYer-IJzwyAHt723SuEIF2SrgWJ_wRqtJYPnplwlLCCJ3B76ROONl6QH0Bvo"
 }
 
 nearby_payload = {
@@ -78,7 +78,7 @@ nearby_payload = {
     },
     "cell_ids": [
         # NEED TO ADD A CALL THAT FINDS CELL IDS FROM USER LAT/LON
-        # POST to /nest/parking-nests-by-cell with i think this payload
+        # POST to /map/rider-cells (i think, see chucker_exports/map_ridercells.txt) 
         # or just added manually (witch is what i did. but will fail if its supposed dynamic)
         # It looks like something breaks when i add more then 3 "cell_ids" so...
         # no clue, still broken
