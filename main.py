@@ -208,16 +208,21 @@ sorted_scooters = dict(
     sorted(scooters.items(), key=lambda item: item[1]["distance_miles"])
 )
 
-for scooter_id, info in sorted_scooters.items():
-    chirp_payload = {
-        "alarm": alarm,
-        "bird_id": scooter_id
-    }
-    chirp_response = requests.put(chirp_url, headers=headers, json=chirp_payload)
-    chirp_data = chirp_response.json()
-    scooter_code = info["code"]
-    
-    if not chirp_data["down"]:
-        print(f"Success: {scooter_code}")
-    else:
-        print(f"Failed: {scooter_code}")
+# Exits script cleanly if user presses ctrl+c
+try:
+    for scooter_id, info in sorted_scooters.items():
+        chirp_payload = {
+            "alarm": alarm,
+            "bird_id": scooter_id
+        }
+        chirp_response = requests.put(chirp_url, headers=headers, json=chirp_payload)
+        chirp_data = chirp_response.json()
+        scooter_code = info["code"]
+        
+        if not chirp_data["down"]:
+            print(f"Success: {scooter_code}")
+        else:
+            print(f"Failed: {scooter_code}")
+except KeyboardInterrupt:
+    print("\nEXITING SCRIPT...")
+    sys.exit()

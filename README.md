@@ -6,7 +6,8 @@
 - [x] add debug feture that switches bettween `"alarm": False` and `"alarm": True`
 - [x] order scooters by how close they are to the user (i.e: chirp the closest scooter first) ***
 - [x] ignore every scooter with "battery_level": 0 (i have no clue but nearby_data has no dead ones)
-- [ ] make output look more pretty when interupted
+- [x] make output look more pretty when interupted
+- [ ] allow user to specify how many scooters to try (1, 5, 10, all, ect)
 - [x] cell_ids is dynamic, have script make an enpoint request to get cell_ids
 - [ ] identify responce codes (check for ratelimit or invalid prams)
 - [ ] add more debug logs
@@ -39,6 +40,7 @@
     - [x] send POST to /api/v1/auth/email (with email as payload)
     - [x] if returns `"validation_required": true` tell user to check email
     - [x] prompt user to copy "magic link token" from email
+    - [ ] have the token prompt strip spaces/junk
     - [x] send POST to /api/v1/auth/magic-link/use (with email and magic token as payload)
     - [x] api will return "access" and "refresh" tokens, place "access" into a veriable
     - [x] create a object with: auth timestamp, and auth token
