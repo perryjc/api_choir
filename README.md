@@ -1,5 +1,7 @@
 # api_choir
 
+## NEED TO ADD DISCRIPTION AND INSTRUCTIONS
+
 ## TODO:
 - [x] allow user specify lat/lon
 - [x] allow user specify location/zipcode
@@ -40,7 +42,7 @@
     - [x] send POST to /api/v1/auth/email (with email as payload)
     - [x] if returns `"validation_required": true` tell user to check email
     - [x] prompt user to copy "magic link token" from email
-    - [ ] have the token prompt strip spaces/junk
+    - [x] have the token prompt strip spaces/junk
     - [x] send POST to /api/v1/auth/magic-link/use (with email and magic token as payload)
     - [x] api will return "access" and "refresh" tokens, place "access" into a veriable
     - [x] create a object with: auth timestamp, and auth token

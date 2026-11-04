@@ -59,7 +59,8 @@ response = requests.post(send_auth_email_url, headers=headers, json=send_auth_em
 if(response.json() == {'validation_required': True}):
     print("Check your email for `Magic Link` email and copy the token under the 'verify' button.")
     print("do NOT click the 'verify' button")
-    token = input("Paste the token: ")
+    # strips spaces from the token input
+    token = input("Paste the token: ").strip()
 else:
     print("Error: ", response.json())
     sys.exit()
