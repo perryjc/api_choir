@@ -56,6 +56,7 @@
 
 ## Required librarys
 - geopy
+- rich
 
 ## Resorces
 - https://github.com/ubahnverleih/WoBike/tree/master (unoffical bird api docs)

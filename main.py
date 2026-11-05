@@ -3,6 +3,7 @@ import json
 import datetime
 import os
 import sys
+from rich import print
 import geopy
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
@@ -220,9 +221,9 @@ try:
         scooter_code = info["code"]
         
         if not chirp_data["down"]:
-            print(f"Success: {scooter_code}")
+            print(f"[bold green]Success: {scooter_code}[/bold green]")
         else:
-            print(f"Failed: {scooter_code}")
+            print(f"[bold red]Failed: {scooter_code}[/bold red]")
 except KeyboardInterrupt:
     print("\nEXITING SCRIPT...")
     sys.exit()
