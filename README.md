@@ -62,3 +62,4 @@
 - https://github.com/ubahnverleih/WoBike/tree/master (unoffical bird api docs)
 - https://github.com/api-evangelist/bird-rides/tree/main (independent third-party profile of bird api profile)
 - https://www.geeksforgeeks.org/python/python-sort-python-dictionaries-by-key-or-value/ (sorting is wild)
+- https://github.com/aarsaputra/php2shell/blob/main/lib/banner.py (banner/ascii inspo and example)
