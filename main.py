@@ -3,6 +3,8 @@ import json
 import datetime
 import os
 import sys
+import art
+import rich
 from rich import print
 import geopy
 from geopy.geocoders import Nominatim
@@ -13,6 +15,10 @@ cells_url = base_url + "/map/rider-cells" # added
 nearby_url = base_url + "/bird/nearby-by-cells"
 chirp_url = base_url + "/bird/chirp"
 user_url = base_url + "/user"
+
+# render ASCII banner
+art.render_banner()
+print("")
 
 ct = datetime.datetime.now()
 timestamp = ct.strftime("%Y-%m-%d")
