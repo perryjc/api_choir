@@ -21,16 +21,14 @@ LINE3 = r"█████▀ ▀████ ▀███▀ ▀███▀  �
 print(f"[#00ffff]{LINE1}[/#00ffff]")
 print(f"[#10efff]{LINE2}[/#10efff]")
 print(f"[#5cdcff]{LINE3}[/#5cdcff]")
-
 print(f"[#72cbff]{LINE1}[/#72cbff]")
 print(f"[#81b9ff]{LINE2}[/#81b9ff]")
 print(f"[#91a5ff]{LINE3}[/#91a5ff]")
-
 print(f"[#a58cff]{LINE1}[/#a58cff]")
 print(f"[#c065ff]{LINE2}[/#c065ff]")
 print(f"[#d936f2]{LINE3}[/#d936f2]")
 
-
+print("\n[green]By James Perry | github: https://github.com/perryjc | Website: https://perryjc.github.io/[/green]")
 
 
 # UNUSED BANNERS:
