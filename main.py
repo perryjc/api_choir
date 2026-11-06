@@ -24,11 +24,11 @@ if os.path.isfile("auth_info_file.txt"):
         auth_timestamp = auth_info["timestamp"]
         AUTH_TOKEN = auth_info["auth_token"]
 else:
-    print("Auth file not found. run `auth.py` to verify your email and get a auth token")
+    print("[bold bright_red]ERROR: Auth file not found. run `auth.py` to verify your email and get a auth token[/bold bright_red]")
     sys.exit()
 
 if auth_timestamp != timestamp:
-    print("Auth token is expired. re-run `auth.py`")
+    print("[bold bright_red]ERROR: Auth token is expired. re-run `auth.py`[/bold bright_red]")
     sys.exit()
 
 print("email: ", email)
@@ -163,7 +163,7 @@ def check_connection(url):
     if response.status_code == 200:
         print("Connection active")
     else: 
-        print("Connection failed with status code:", response.status_code)
+        print("[bold bright_red]ERROR: Connection failed with status code: [/bold bright_red]", response.status_code)
         sys.exit()
 
 def verify_headers(url, headers):
@@ -172,7 +172,7 @@ def verify_headers(url, headers):
     server_responce = response.json()
     if "code" in server_responce:
         responce_code = server_responce["code"]
-        print("Header verification failed with status code:", responce_code)
+        print("[bold bright_red]Header verification failed with status code: [/bold bright_red]", responce_code)
         print("Is auth token valid?")
         sys.exit()
     else:
