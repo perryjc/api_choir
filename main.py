@@ -58,10 +58,10 @@ print("target cords: ",latitude, longitude)
 chirp_type = input("DEBUG: enable alarm (y/n): ")
 if chirp_type.lower() == "n" or chirp_type.lower() == "no":
     alarm = False
-    print("alarm disabled")
+    print("[bright_cyan]alarm disabled[/bright_cyan]")
 else:
     alarm = True
-    print("alarm enabled")
+    print("[bright_cyan]alarm enabled[/bright_cyan]")
 
 # first payload used to get the cell ids list from the endpoint: /map/rider-cells
 get_cell_ids_payload = {
@@ -164,7 +164,7 @@ nearby_payload = {
 }
 
 def check_connection(url):
-    print("Checking connection to API...")
+    print("[bold bright_yellow]Checking connection to API...[/bold bright_yellow]")
     response = requests.get(url, timeout=5)
     if response.status_code == 200:
         print("Connection active")
@@ -173,7 +173,7 @@ def check_connection(url):
         sys.exit()
 
 def verify_headers(url, headers):
-    print("Verifying headers...")
+    print("[bold bright_yellow]Verifying headers...[/bold bright_yellow]")
     response = requests.get(url, headers=headers, timeout=5)
     server_responce = response.json()
     if "code" in server_responce:
@@ -187,7 +187,7 @@ def verify_headers(url, headers):
 check_connection("https://bird.co/")
 verify_headers(user_url, headers)
 
-print("Starting chirp requests...")
+print("[bold bright_yellow]Starting chirp requests...[/bold bright_yellow]")
 response = requests.post(nearby_url, headers=headers, json=nearby_payload)
 
 nearby_data = response.json()
@@ -227,9 +227,9 @@ try:
         scooter_code = info["code"]
         
         if not chirp_data["down"]:
-            print(f"[bold green]Success: {scooter_code}[/bold green]")
+            print(f"[bold bright_cyan]Bird [/bold bright_cyan]- [bold green]Success: {scooter_code}[/bold green]")
         else:
-            print(f"[bold red]Failed: {scooter_code}[/bold red]")
+            print(f"[bold bright_cyan]Bird [/bold bright_cyan]- [bold red]Failed: {scooter_code}[/bold red]")
 except KeyboardInterrupt:
     print("\nEXITING SCRIPT...")
     sys.exit()

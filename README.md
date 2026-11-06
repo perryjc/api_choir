@@ -14,10 +14,10 @@
 - [ ] identify responce codes (check for ratelimit or invalid prams)
 - [ ] add more debug logs
 - [ ] add utils.py file with helper functions
-- [ ] add ascii art when script is ran
+- [x] add ascii art when script is ran
 - [ ] display options user selected and then ask "do you want to continue?"
 - [ ] split diffrent steps of the script into seprate files
-- [ ] color "success" and "failure" messages
+- [x] color "success" and "failure" messages
 - [ ] the bird app does a POST to `/user/session-start` every time the app is open, implement this (header check)
 - [x] make `verify_headers` parse responce insted of just checking if server responds
 - [ ] add script breakdown/walkthrough
@@ -63,3 +63,5 @@
 - https://github.com/api-evangelist/bird-rides/tree/main (independent third-party profile of bird api profile)
 - https://www.geeksforgeeks.org/python/python-sort-python-dictionaries-by-key-or-value/ (sorting is wild)
 - https://github.com/aarsaputra/php2shell/blob/main/lib/banner.py (banner/ascii inspo and example)
+- https://www.instagram.com/dayofexploits/ (more CLI tool design references and inspiration)
+- https://colordesigner.io/gradient-generator (Gradent generator)
