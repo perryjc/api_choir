@@ -66,17 +66,15 @@ def print_user_selections(email, alarm, lat, long, auth_time):
         alarm_value = "ACTIVE"
     else: 
         alarm_value = "INACTIVE"
-    
-    print("user selections")
 
-    table = Table(title="config")
+    table = Table(title="[bold bright_cyan]Selections[/bold bright_cyan]")
 
-    table.add_column("option", justify="left", style="green")
-    table.add_column("value", justify="right", style="red")
+    table.add_column("option", justify="left", style="#F5AE5D")
+    table.add_column("value", justify="right", style="bold bright_cyan")
 
-    table.add_row("Email:", email) #value violet
-    table.add_row("Token Timestamp:", auth_time) #value violet
-    table.add_row("Connection:", "ACTIVE") # option yellow, value green
+    table.add_row("Email:", f"[#C580F2]{email}[/#C580F2]") #value violet
+    table.add_row("Token Timestamp:", f"[#C580F2]{auth_time}[/#C580F2]") #value violet
+    table.add_row("Connection:", "[bold #5BEB42]ACTIVE[/bold #5BEB42]") # option yellow, value green
     table.add_row("Auth_token:", "VALID") # option yellow, value green
     table.add_row("Latitude:", lat) # value blue
     table.add_row("Longitude:", long) # Value blue
