@@ -48,3 +48,16 @@ def render_banner():
 # print(f"[cyan1]{LINE1}[/cyan1]")
 # print(f"[spring_green1]{LINE2}[/spring_green1]")
 # print(f"[green3]{LINE3}[/green3]")
+
+# placeholder values:
+
+email = "bird@bird.co"
+alarm = True
+latitude = "38.8820057"
+longitude = "-77.1115141"
+auth_timestamp = "2026-11-09"
+# connection_active = True
+# auth_token_valid = True
+# add something that finds how many birds will chirp near by (before line 218 of main.py)
+
+def print_user_selections():
