@@ -37,8 +37,6 @@ if auth_timestamp != timestamp:
     print("[bold bright_red]ERROR: Auth token is expired. re-run `auth.py`[/bold bright_red]")
     sys.exit()
 
-print("email: ", email)
-
 address = input("Enter a zip code In the US or address (or 'enter' to input lat/lon manually): ")
 if address:
     geolocator = Nominatim(user_agent="bird_api_choir")
@@ -53,15 +51,14 @@ else:
 
 user_coords = (latitude, longitude)
 
-print("target cords: ",latitude, longitude)
 
 chirp_type = input("DEBUG: enable alarm (y/n): ")
 if chirp_type.lower() == "n" or chirp_type.lower() == "no":
     alarm = False
-    print("[bright_cyan]alarm disabled[/bright_cyan]")
+    print("[red]alarm disabled[/red]")
 else:
     alarm = True
-    print("[bright_cyan]alarm enabled[/bright_cyan]")
+    print("[green]alarm enabled[/green]")
 
 # first payload used to get the cell ids list from the endpoint: /map/rider-cells
 get_cell_ids_payload = {
@@ -166,9 +163,7 @@ nearby_payload = {
 def check_connection(url):
     print("[bold bright_yellow]Checking connection to API...[/bold bright_yellow]")
     response = requests.get(url, timeout=5)
-    if response.status_code == 200:
-        print("Connection active")
-    else: 
+    if not response.status_code == 200:
         print("[bold bright_red]ERROR: Connection failed with status code: [/bold bright_red]", response.status_code)
         sys.exit()
 
@@ -181,8 +176,6 @@ def verify_headers(url, headers):
         print("[bold bright_red]Header verification failed with status code: [/bold bright_red]", responce_code)
         print("Is auth token valid?")
         sys.exit()
-    else:
-        print("Headers are valid")
 
 check_connection("https://bird.co/")
 verify_headers(user_url, headers)
@@ -233,5 +226,5 @@ try:
         else:
             print(f"[bold bright_cyan]Bird [/bold bright_cyan]- [bold red]Failed: {scooter_code}[/bold red]")
 except KeyboardInterrupt:
-    print("\nEXITING SCRIPT...")
+    print("\n[bold red]EXITING SCRIPT...[/bold red]")
     sys.exit()
