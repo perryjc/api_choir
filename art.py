@@ -3,6 +3,7 @@ from rich import print
 from rich.console import Console
 from rich.text import Text
 from rich.table import Table
+from rich.prompt import Prompt
 
 # this script will have the ascii art and other info printed by main.py on run
 
@@ -84,6 +85,6 @@ def print_user_selections(email, alarm, lat, long, auth_time):
     console = Console()
     console.print(table)
 
-    print("\n[#F5AE5D]Press Enter to Continue...[/#F5AE5D]")
+    Prompt.ask("\n[#F5AE5D]Press Enter to Continue...[/#F5AE5D]")
 
 print_user_selections(email, alarm, latitude, longitude, auth_timestamp)
