@@ -187,7 +187,6 @@ def verify_headers(url, headers):
 check_connection("https://bird.co/")
 verify_headers(user_url, headers)
 
-print("[bold bright_yellow]Starting chirp requests...[/bold bright_yellow]")
 response = requests.post(nearby_url, headers=headers, json=nearby_payload)
 
 nearby_data = response.json()
@@ -214,6 +213,9 @@ for bird in nearby_data["birds"]:
 sorted_scooters = dict(
     sorted(scooters.items(), key=lambda item: item[1]["distance_miles"])
 )
+
+art.print_user_selections(email, alarm, latitude, longitude, auth_timestamp)
+print("\n[bold bright_yellow]Starting chirp requests...[/bold bright_yellow]")
 
 # Exits script cleanly if user presses ctrl+c
 try:
