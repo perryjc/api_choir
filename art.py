@@ -71,16 +71,16 @@ def print_user_selections(email, alarm, lat, long, auth_time):
 
     table = Table(title="config")
 
-    table.add_column("option", justify="right", style="green")
+    table.add_column("option", justify="left", style="green")
     table.add_column("value", justify="right", style="red")
 
-    table.add_row("Email", email) #value violet
-    table.add_row("Token Timestamp", auth_time) #value violet
+    table.add_row("Email:", email) #value violet
+    table.add_row("Token Timestamp:", auth_time) #value violet
     table.add_row("Connection:", "ACTIVE") # option yellow, value green
-    table.add_row("Auth_token", "VALID") # option yellow, value green
-    table.add_row("Latitude", lat) # value blue
-    table.add_row("Longitude", long) # Value blue
-    table.add_row("Alarm", alarm_value) # Value green or red
+    table.add_row("Auth_token:", "VALID") # option yellow, value green
+    table.add_row("Latitude:", lat) # value blue
+    table.add_row("Longitude:", long) # Value blue
+    table.add_row("Alarm:", alarm_value) # Value green or red
 
     console = Console()
     console.print(table)
