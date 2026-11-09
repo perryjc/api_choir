@@ -53,7 +53,7 @@ def render_banner():
 # placeholder values:
 
 email = "bird@bird.co"
-alarm = True
+alarm = False
 latitude = "38.8820057"
 longitude = "-77.1115141"
 auth_timestamp = "2026-11-09"
@@ -63,10 +63,11 @@ auth_timestamp = "2026-11-09"
 
 def print_user_selections(email, alarm, lat, long, auth_time):
     if alarm:
-        alarm_value = "ACTIVE"
+        alarm_value = "[bold #5BEB42]ACTIVE[/bold #5BEB42]"
     else: 
-        alarm_value = "INACTIVE"
+        alarm_value = "[bold #F23C24]INACTIVE[/bold #F23C24]"
 
+    print("")
     table = Table(title="[bold bright_cyan]Selections[/bold bright_cyan]")
 
     table.add_column("option", justify="left", style="#F5AE5D")
@@ -75,12 +76,14 @@ def print_user_selections(email, alarm, lat, long, auth_time):
     table.add_row("Email:", f"[#C580F2]{email}[/#C580F2]") #value violet
     table.add_row("Token Timestamp:", f"[#C580F2]{auth_time}[/#C580F2]") #value violet
     table.add_row("Connection:", "[bold #5BEB42]ACTIVE[/bold #5BEB42]") # option yellow, value green
-    table.add_row("Auth_token:", "VALID") # option yellow, value green
+    table.add_row("Auth_token:", "[bold #5BEB42]VALID[/bold #5BEB42]") # option yellow, value green
     table.add_row("Latitude:", lat) # value blue
     table.add_row("Longitude:", long) # Value blue
     table.add_row("Alarm:", alarm_value) # Value green or red
 
     console = Console()
     console.print(table)
+
+    print("\n[#F5AE5D]Press Enter to Continue...[/#F5AE5D]")
 
 print_user_selections(email, alarm, latitude, longitude, auth_timestamp)
