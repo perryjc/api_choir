@@ -2,6 +2,7 @@ import rich
 from rich import print
 from rich.console import Console
 from rich.text import Text
+from rich.table import Table
 
 # this script will have the ascii art and other info printed by main.py on run
 
@@ -60,4 +61,28 @@ auth_timestamp = "2026-11-09"
 # auth_token_valid = True
 # add something that finds how many birds will chirp near by (before line 218 of main.py)
 
-def print_user_selections():
+def print_user_selections(email, alarm, lat, long, auth_time):
+    if alarm:
+        alarm_value = "ACTIVE"
+    else: 
+        alarm_value = "INACTIVE"
+    
+    print("user selections")
+
+    table = Table(title="config")
+
+    table.add_column("option", justify="right", style="green")
+    table.add_column("value", justify="right", style="red")
+
+    table.add_row("Email", email) #value violet
+    table.add_row("Token Timestamp", auth_time) #value violet
+    table.add_row("Connection:", "ACTIVE") # option yellow, value green
+    table.add_row("Auth_token", "VALID") # option yellow, value green
+    table.add_row("Latitude", lat) # value blue
+    table.add_row("Longitude", long) # Value blue
+    table.add_row("Alarm", alarm_value) # Value green or red
+
+    console = Console()
+    console.print(table)
+
+print_user_selections(email, alarm, latitude, longitude, auth_timestamp)
