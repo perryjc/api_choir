@@ -1,10 +1,10 @@
 # api_choir
 
-## NEED TO ADD DISCRIPTION 
+NEED TO ADD DISCRIPTION 
 
-# Usage # 
+## Usage ##
 
-Authenticate/Get auth token:
+**Authenticate/Get auth token:** (Run this before useing main.py for the first time)
 ```
 $> python3 auth.py 
 Enter email (must be associated with an existing Bird account): example@email.com
@@ -14,6 +14,25 @@ do NOT click the 'verify' button
 Paste the token: <PASTE TOKEN HERE>
 ```
 If it returns `Auth token generated successfully. try running main.py now.` you did it right.
+
+**Start Script:**
+If you did it right you should just be able to run:
+```
+$> python3 main.py
+```
+
+Then enter an address (or cords) and if you want the alarm:
+```
+Enter a zip code In the US or address (or 'enter' to input lat/lon manually): <ADDRESS>
+DEBUG: enable alarm (y/n): <Y OR N>
+
+alarm enabled
+Checking connection to API...
+Verifying headers...
+
+{OPTIONS TABLE}
+Press Enter to Continue...: 
+```
 
 
 ## TODO:
