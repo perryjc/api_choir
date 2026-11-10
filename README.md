@@ -1,6 +1,20 @@
 # api_choir
 
-## NEED TO ADD DISCRIPTION AND INSTRUCTIONS
+## NEED TO ADD DISCRIPTION 
+
+# Usage # 
+
+Authenticate/Get auth token:
+```
+$> python3 auth.py 
+Enter email (must be associated with an existing Bird account): example@email.com
+
+Check your email for `Magic Link` email and copy the token under the 'verify' button.
+do NOT click the 'verify' button
+Paste the token: <PASTE TOKEN HERE>
+```
+If it returns `Auth token generated successfully. try running main.py now.` you did it right.
+
 
 ## TODO:
 - [x] allow user specify lat/lon
