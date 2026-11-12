@@ -207,7 +207,7 @@ sorted_scooters = dict(
     sorted(scooters.items(), key=lambda item: item[1]["distance_miles"])
 )
 
-art.print_user_selections(email, alarm, latitude, longitude, auth_timestamp)
+art.print_user_selections(email, alarm, latitude, longitude, auth_timestamp, len(sorted_scooters))
 print("\n[bold bright_yellow]Starting chirp requests...[/bold bright_yellow]")
 
 # Exits script cleanly if user presses ctrl+c

@@ -62,7 +62,7 @@ def render_banner():
 # auth_token_valid = True
 # add something that finds how many birds will chirp near by (before line 218 of main.py)
 
-def print_user_selections(email, alarm, lat, long, auth_time):
+def print_user_selections(email, alarm, lat, long, auth_time, scooters2scan):
     if alarm:
         alarm_value = "[bold #5BEB42]ACTIVE[/bold #5BEB42]"
     else: 
@@ -78,6 +78,7 @@ def print_user_selections(email, alarm, lat, long, auth_time):
     table.add_row("Token Timestamp:", f"[#C580F2]{auth_time}[/#C580F2]") #value violet
     table.add_row("Connection:", "[bold #5BEB42]ACTIVE[/bold #5BEB42]") # option yellow, value green
     table.add_row("Auth_token:", "[bold #5BEB42]VALID[/bold #5BEB42]") # option yellow, value green
+    table.add_row("Number of Targets:", f"[bold bright_yellow]{str(scooters2scan)}[/bold bright_yellow]") 
     table.add_row("Latitude:", str(lat)) # value blue
     table.add_row("Longitude:", str(long)) # Value blue
     table.add_row("Alarm:", alarm_value) # Value green or red
