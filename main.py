@@ -60,6 +60,20 @@ else:
     alarm = True
     print("[green]alarm enabled[/green]")
 
+# Scooter target amount spesify:
+limit_input = input("Enter max number of scooters to target (or hit `enter` for all): ")
+if limit_input.strip():
+    try:
+        scooter_limit = int(limit_input)
+        if scooter_limit <= 0:
+            print("[bold bright_red]Limit must be greater than 0. Defaulting to all.[/bold bright_red]")
+            scooter_limit = None
+    except ValueError:
+        print("[bold bright_red]Invalid number entered. Defaulting to all scooters.[/bold bright_red]")
+        scooter_limit = None
+else:
+    scooter_limit = None
+
 # first payload used to get the cell ids list from the endpoint: /map/rider-cells
 get_cell_ids_payload = {
   "geometries": {
@@ -203,8 +217,9 @@ for bird in nearby_data["birds"]:
     }
 
 # sorts the dictionary based on how far from the user the scooters are.
+# "[:scooter_limit]" makes it so it limits how many from the sorted list it turns back into a dict
 sorted_scooters = dict(
-    sorted(scooters.items(), key=lambda item: item[1]["distance_miles"])
+    sorted(scooters.items(), key=lambda item: item[1]["distance_miles"])[:scooter_limit]
 )
 
 art.print_user_selections(email, alarm, latitude, longitude, auth_timestamp, len(sorted_scooters))

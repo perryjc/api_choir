@@ -42,13 +42,13 @@ Press Enter to Continue...:
 - [x] order scooters by how close they are to the user (i.e: chirp the closest scooter first) ***
 - [x] ignore every scooter with "battery_level": 0 (i have no clue but nearby_data has no dead ones)
 - [x] make output look more pretty when interupted
-- [ ] allow user to specify how many scooters to try (1, 5, 10, all, ect)
+- [x] allow user to specify how many scooters to try (1, 5, 10, all, ect)
 - [x] cell_ids is dynamic, have script make an enpoint request to get cell_ids
 - [ ] identify responce codes (check for ratelimit or invalid prams)
 - [ ] add more debug logs
 - [ ] add utils.py file with helper functions
 - [x] add ascii art when script is ran
-- [ ] display options user selected and then ask "do you want to continue?"
+- [x] display options user selected and then ask "do you want to continue?"
 - [ ] split diffrent steps of the script into seprate files
 - [x] color "success" and "failure" messages
 - [ ] the bird app does a POST to `/user/session-start` every time the app is open, implement this (header check)
@@ -57,7 +57,7 @@ Press Enter to Continue...:
 - [ ] talk about apk mods that enable chucker among other things
 - [ ] make output ... (i forgot)
 - [x] make output show the 5 character code of each chirped scooter
-- [ ] try to cut down nonrequired headers (clean up)
+- [x] try to cut down nonrequired headers (clean up)
 - [ ] limit api chirp requests only to scooters within 0.5 miles of user.
 - [ ] talk about how bird has the issue of allowing users to chirp scooters from anywhere
 - [ ] integrate other scooter brands (lime, hop, ect)
