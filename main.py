@@ -44,8 +44,8 @@ if address:
     latitude = location.latitude
     longitude = location.longitude
 else:
-    latitude = float(input("Enter latitude (or hit `enter` to use default): ")) or 38.8820057
-    longitude = float(input("Enter longitude (or hit `enter` to use default): ")) or -77.1115141
+    latitude = float(input("Enter latitude (or hit `enter` to use default): ") or 38.8820057)
+    longitude = float(input("Enter longitude (or hit `enter` to use default): ") or -77.1115141)
 
 # default cords are for Ballston MU metro station
 
