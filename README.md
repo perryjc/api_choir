@@ -2,6 +2,14 @@
 
 NEED TO ADD DISCRIPTION 
 
+## OWASP API Security top 10 found within the api (may remove later)
+
+- API1:2023 Broken Object Level Authorization (`"alarm": false` by default but can be `true` by modifying payloads)
+- API3:2023 Broken Object Property Level Authorization (nearby scooter endpoint and more)
+- API4:2023 Unrestricted Resource Consumption (Chirp endpoint is not rate limited)
+- API5:2023 Broken Function Level Authorization (Access to chirp alarm, an admin feature not accessable by users)
+- API9:2023 Improper Inventory Management (dev/stageing endpoints are documented within the public apk)
+
 ## Usage ##
 
 **Authenticate/Get auth token:** (Run this before useing main.py for the first time)
