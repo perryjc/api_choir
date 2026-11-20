@@ -106,3 +106,4 @@ Press Enter to Continue...:
 - https://github.com/aarsaputra/php2shell/blob/main/lib/banner.py (banner/ascii inspo and example)
 - https://www.instagram.com/dayofexploits/ (more CLI tool design references and inspiration)
 - https://colordesigner.io/gradient-generator (Gradent generator)
+- https://api-security.owasp.org/editions/2023/en/0x11-t10/ (OWASP API top 10)
